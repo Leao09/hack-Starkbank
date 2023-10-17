@@ -29,7 +29,9 @@
 
 ## 📝 Descrição
 
-Curta descrição sobre o que o seu projeto faz (problema a ser resolvido e solução proposta).
+Este projeto tem como objetivo principal simplificar a gestão do almoxarifado da Cervejaria Ambev, utilizando um robô tecnológico para processar pedidos de materiais e guiar os operadores até o local de armazenamento. Espera-se uma redução no tempo de separação de peças, bem como na diminuição de erros de estoque.
+
+Este projeto busca otimizar a eficiência operacional da Cervejaria Ambev, demonstrando nosso compromisso com a excelência no atendimento ao cliente e a adoção de tecnologias inovadoras para aprimorar a gestão do almoxarifado.
 
 ## 📁 Estrutura de pastas
 
@@ -37,11 +39,28 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 - <b>readme.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
-- <b>documentos</b>: aqui estarão todos os documentos do projeto. Há também uma pasta denominada <b>outros</b> onde estão presentes documentos complementares.
+- <b>docs</b>: aqui estarão todos os documentos do projeto [/docs](/docs). Há também uma pasta denominada <b>outros</b> onde estão presentes documentos complementares.
+
+- <b>media</b>: pasta para armazenar imagens e vídeos do projeto.
+
 
 ## 💻 Execução do projeto
+
+- Em construção
+
+## 🗃 Histórico de lançamentos
+
+**1.0 — 16/10/2023 (Sprint I)**
+
+* Entendimento do negócio
+
+* Entendimento da experiência do usuário
+
+* Análise de impacto ético
+
+* Arquitetura do sistema
 
 
 ## 📋 Licença/License
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, Nome do integrante 1, Nome do integrante 2, Nome do integrante 3, Nome do integrante 4, Nome do integrante 5, Nome do integrante 6, Nome do integrante 7</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"> This project is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
