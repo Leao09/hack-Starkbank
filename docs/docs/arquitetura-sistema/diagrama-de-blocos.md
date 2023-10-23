@@ -1,1 +1,3 @@
-# Diagrama de blocos
+# Descrição da Arquitetura
+
+![](/img/Arquitetura.png)
