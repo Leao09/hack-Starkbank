@@ -130,7 +130,10 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
       <td>12</td>
       <td>1199.76</td>
     </tr>
-<tr>  <td colspan="3">Somatório</td>  <td>R$ 72,797.46</td>  <td>-</td>  <td>-</td>  <td>632,400.46</td>  </tr>  </table>
+</tbody>
+<tr>  <td colspan="3">Somatório</td>  <td>R$ 72,797.46</td>  <td>-</td>  <td>-</td>  <td>632,400.46</td>  
+</tr>  
+</table>
 
 Os custos com os funcionários CLT são baseados em pesquisas de mercado dos sites Catho e iDinheiro. Além dos salários base, foram inclusos benefícios como plano de saúde de R$ 600, Vale Transporte de R$ 400 e VR de R$ 600.
 
