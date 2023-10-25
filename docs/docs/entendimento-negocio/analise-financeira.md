@@ -83,7 +83,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
     <tr>
       <td rowspan="5">Serviços da AWS</td>
       <td>Amazon S3</td>
-      <td>50</td>
+      <td>USD 50</td>
       <td>R$ 249.99</td>
       <td>-</td>
       <td>12</td>
@@ -91,7 +91,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
     </tr>
     <tr>
       <td>Amazon EC2</td>
-      <td>2000</td>
+      <td>USD 2000</td>
       <td>R$ 9,999.80</td>
       <td>-</td>
       <td>12</td>
@@ -99,7 +99,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
     </tr>
     <tr>
       <td>Amazon RDS</td>
-      <td>200</td>
+      <td>USD 200</td>
       <td>R$ 999.80</td>
       <td>-</td>
       <td>12</td>
@@ -107,7 +107,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
     </tr>
     <tr>
       <td>AWS Lambda</td>
-      <td>50</td>
+      <td>USD 50</td>
       <td>R$ 249.99</td>
       <td>-</td>
       <td>12</td>
@@ -115,7 +115,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
     </tr>
     <tr>
       <td>Amazon CloudWatch</td>
-      <td>100</td>
+      <td>USD 100</td>
       <td>R$ 499.90</td>
       <td>-</td>
       <td>12</td>
@@ -124,14 +124,14 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
     <tr>
       <td>ChatGPT 4</td>
       <td>1 conta comercial</td>
-      <td>20</td>
+      <td>USD 20</td>
       <td>R$ 99.98</td>
       <td>-</td>
       <td>12</td>
       <td>1199.76</td>
     </tr>
 </tbody>
-<tr>  <td colspan="3">Somatório</td>  <td>R$ 72,797.46</td>  <td>-</td>  <td>-</td>  <td>632,400.46</td>  
+<tr>  <td colspan="3">Somatório</td>  <td>R$ 72,797.46</td>  <td>-</td>  <td>-</td>  <td>R$ 632,400.46</td>  
 </tr>  
 </table>
 
