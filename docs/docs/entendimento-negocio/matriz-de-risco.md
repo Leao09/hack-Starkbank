@@ -4,7 +4,9 @@ A matriz de risco é uma ferramenta que fornece uma visão dos riscos e oportuni
 
 A seguir, apresentamos a matriz de risco específica para o projeto de implementação do robô de auto atendimento no almoxarifado da Ambev. Os riscos identificados estão categorizados de acordo com a matriz e é explorado possíveis estratégias de mitigação. 
 
-FIGURA MATRIZ DE RISCO
+<img src={require('/img/Matriz-de-riscos.png').default} width='100%'/>
+
+### Ameaças: 
 
 **1. Desafios de navegação no ambiente do almoxarifado com possíveis obstáculos:**
 
@@ -49,4 +51,24 @@ FIGURA MATRIZ DE RISCO
 -   Impacto: Médio 
 -   Mitigação: Realizar workshops e sessões de treinamento com as partes interessadas para entender os processos atuais. Estabelecer checkpoints frequentes para revisão e ajuste da integração conforme necessário.
 
+### Oportunidades:
 
+**8. Otimização do atendimento**
+-   Probabilidade: Muito Alto 
+-   Impacto: Muito Alto 
+
+**9. Uso de modelos de linguagem LLM**
+-   Probabilidade: Muito Alto 
+-   Impacto: Alto 
+
+**10. Eficiência na localização de itens**
+-   Probabilidade: Alto 
+-   Impacto: Alto 
+
+**11. Redução de erros humanos**
+-   Probabilidade: Alto 
+-   Impacto: Médio-Alto 
+
+**12. Redução de custos com perdas do almoxarifado**
+-   Probabilidade: Médio-Alto 
+-   Impacto: Médio-Alto  
