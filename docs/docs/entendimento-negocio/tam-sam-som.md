@@ -1,4 +1,6 @@
-# Total Addressable Market 
+# TAM, SAM & SOM
+
+## Total Addressable Market 
 
 Para calcular o Service Obtainable Market (SOM), é necessário levar em consideração alguns fatores que determinarão como a empresa poderá, de fato, conquistar a parcela de mercado exemplificada no Service Addressable Market (SAM). Portanto, apesar de a empresa foco, a AMBEV, ser líder de mercado, essa análise ainda é válida para comparação direta com os concorrentes. Dessa forma, serão utilizados alguns fatores como métricas para a avaliação, a saber:
 
@@ -13,7 +15,7 @@ Sendo assim, visando aumentar a participação de mercado, a Ambev, apesar de te
 
 A tendência de mercado aponta para uma leve alta. Isso leva em consideração o reajuste no consumo de cerveja durante a pandemia, que sofreu uma queda acentuada devido à paralisação de comércios, como bares e restaurantes. No entanto, o cenário é otimista em relação ao aumento gradual do consumo, estimando o retorno aos patamares pré-pandemia até 2025, com uma expansão substancial do mercado até 2028. Isso leva em consideração novas tendências no setor, como o aumento do consumo de cervejas com baixo ou nenhum teor alcoólico.
 
-# Service Addressable Market
+## Service Addressable Market
 
 O SAM para um robô destinado a atuar como guia para pessoas em um grande armazém (para fins de especificar um grande armazém foi considerado em ter ao menos 10.000 metros quadrados) em São Paulo, Brasil, para o mercado de cerveja pode ser estimado considerando os seguintes fatores:
 
@@ -33,7 +35,7 @@ Aqui estão alguns dos benefícios que um robô guia poderia oferecer para armaz
 
 Em geral, o SAM para um robô destinado a atuar como guia para pessoas em um grande armazém em São Paulo, Brasil, para o mercado de cerveja é significativo. O mercado de cerveja em São Paulo está crescendo rapidamente, e há uma necessidade crescente de soluções eficientes e econômicas para gerenciar as operações do armazém. Um robô guia poderia oferecer uma série de benefícios para armazéns no mercado de cerveja, incluindo maior eficiência, custos reduzidos, segurança aprimorada e uma experiência do cliente aprimorada.
 
-# Service Obtainable Market
+## Service Obtainable Market
 
 A análise do Total Available Market (TAM) para um robô destinado a atuar como guia para pessoas em um grande armazém no Brasil, para o mercado de cerveja, considera todo o mercado brasileiro.
 
