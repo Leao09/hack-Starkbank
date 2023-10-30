@@ -2,6 +2,8 @@
 
 A análise financeira do projeto determina aspectos importantes para a estratégia econômica que será adotada pela empresa. Essa projeção permite mensurar o desempenho do projeto e elaborar melhores tomadas de decisões. Destaca-se que essa análise inclui entre os fatores um planejamento orçamentário e otimização de recursos. 
 
+## Tabela de despesas e custos
+
 A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao investimento no projeto. As despesas se relacionam aos compromissos financeiros recorrentes que a empresa tem, como as mensalidades dos serviços AWS. Por outro lado, os custos refletem os investimentos únicos ou fixos, como a aquisição de hardware (exemplo: robô, MacBook Pro) e contratação de pessoal.
 
 <table border="1">
@@ -133,16 +135,70 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
 </tbody>
 <tr>  <td colspan="3">Somatório</td>  <td>R$ 72,797.46</td>  <td>-</td>  <td>-</td>  <td>R$ 632,400.46</td>  
 </tr>
-<tr>  <td colspan="3">Somatório incluindo impostos</td>  <td>R$ 83,717.08</td>  <td>-</td>  <td>-</td>  <td>R$ 727,260.53</td>  
+<tr>  <td colspan="3">Somatório incluindo impostos por dentro</td>  <td>R$ 81,533.15</td>  <td>-</td>  <td>-</td>  <td>R$ 708,288.51</td>  
 </tr>   
 </table>
 
 Os custos com os funcionários CLT são baseados em pesquisas de mercado dos sites Catho e iDinheiro. Além dos salários base, foram inclusos benefícios como plano de saúde de R$ 600, Vale Transporte de R$ 400 e VR de R$ 600.
 
-As despesas relacionadas ao ambiente de desenvolvimento na AWS são distribuídas da seguinte forma:
+### Despesas com serviços da AWS
+Nessa tabela, as despesas relacionadas ao ambiente de desenvolvimento na AWS são distribuídas da seguinte forma:
 
 - 1 EC2 a $ 2,000 mensais para operacionalizar os serviços do robô.
 - Armazenamento S3 a $ 50 mensais para gestão de dados.
 - RDS com custo mensal de R$ 200 para o banco MySQL.
 - CloudWatch a $ 100 mensais para armazenamento de logs, visando facilitar a identificação e correção de possíveis falhas.
 - Lambda a $ 50 mensais para processamento e transformação inicial dos dados recebidos do robô.
+
+### Cálculo do imposto por dentro
+
+No cálculo do custo total de R$ 708,288.52, já foram incluídos impostos, que representam 12% do custo antes dos impostos. Para entender o valor dos impostos nesse contexto, usamos a seguinte fórmula:
+
+- Custo Total = Custo Sem Imposto + (Custo Sem Imposto × Taxa de Imposto).
+
+Reorganizando a fórmula para encontrar o custo sem imposto, temos:
+
+- Custo Sem Imposto = Custo Total / (1 + Taxa de Imposto).
+
+Substituindo com nossos valores:
+
+- Custo Sem Imposto = R$ 708,288.52 / (1 + 0.12).
+
+Calculando, temos:
+
+- Custo Sem Imposto ≈ R$ 632,400.46.
+
+Portanto, o valor dos impostos é:
+
+- R$ 708,288.52 - R$ 632,400.46 = R$ 75,888.06.
+
+### Hipótese de Estimativa de Receitas
+
+Para calcular a estimativa de receitas deste projeto de implementação de um robô de autoatendimento, será considerado o cenário hipotético de desempenho financeiro descrito a seguir.
+
+#### Premissas iniciais
+
+- **Investimento Inicial**: R$ 1.000.000.
+- **Gastos com Manutenção**: Consideremos que estes sejam uma fração anual do investimento inicial, por exemplo, 5% ao ano, que equivale a R$ 50.000.
+- **Melhoria em Eficiência**: Suponhamos que a implementação do robô melhore a eficiência operacional, levando a uma economia de custos de 10% sobre os custos operacionais anuais da empresa.
+- **Aumento na Capacidade Produtiva**: Presumamos um aumento de 15% na receita devido ao aumento da produção e satisfação do cliente.
+- **Redução de Erros**: Estimemos uma economia de 5% nos custos associados a erros operacionais.
+
+#### Cálculo da receita
+
+- Receita Anual Antes do Robô: Para este exemplo, temos R$ 10.000.000.
+- Custos Operacionais Anuais Antes do Robô: Suponhamos R$ 7.000.000.
+- Economia de Custos Operacionais com Robô: 10% de R$ 7.000.000 = R$ 700.000.
+- Redução de Custos por Erros: 5% de R$ 7.000.000 = R$ 350.000.
+- Aumento na Receita devido ao Robô: 15% de R$ 10.000.000 = R$ 1.500.000.
+
+#### Estimativa de Lucro no Primeiro Ano:
+- Receita Total com Robô: R$ 10.000.000 + R$ 1.500.000 = R$ 11.500.000.
+- Custos Operacionais Totais com Robô: R$ 7.000.000 - (R$ 700.000 + R$ 350.000) = R$ 5.950.000.
+- Lucro Operacional com Robô: R$ 11.500.000 - R$ 5.950.000 = R$ 5.550.000.
+- Gastos com Manutenção Anual do Robô: R$ 50.000.
+- Lucro Líquido após Manutenção: R$ 5.550.000 - R$ 50.000 = R$ 5.500.000.
+- Lucro Líquido Hipotético no Primeiro Ano: R$ 5.500.000.
+
+Esta hipótese de lucros leva em conta o investimento inicial como um gasto único, concentrando-se nos ganhos anuais proporcionados pelo robô. A redução nos custos operacionais e a diminuição de erros têm um papel crucial no incremento do lucro operacional. Adicionalmente, o aprimoramento na eficiência e no serviço ao cliente impulsiona o crescimento da receita. Comparativamente, os custos anuais de manutenção do robô são mínimos frente ao lucro operacional obtido.
+
