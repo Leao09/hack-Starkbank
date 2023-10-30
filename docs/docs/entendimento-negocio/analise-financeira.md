@@ -186,19 +186,19 @@ Para calcular a estimativa de receitas deste projeto de implementação de um ro
 
 #### Cálculo da receita
 
-- Receita Anual Antes do Robô: Para este exemplo, temos R$ 10.000.000.
-- Custos Operacionais Anuais Antes do Robô: Suponhamos R$ 7.000.000.
-- Economia de Custos Operacionais com Robô: 10% de R$ 7.000.000 = R$ 700.000.
-- Redução de Custos por Erros: 5% de R$ 7.000.000 = R$ 350.000.
-- Aumento na Receita devido ao Robô: 15% de R$ 10.000.000 = R$ 1.500.000.
+- **Receita Anual Antes do Robô**: Para este exemplo, temos R$ 10.000.000.
+- **Custos Operacionais Anuais Antes do Robô**: Suponhamos R$ 7.000.000.
+- **Economia de Custos Operacionais com Robô**: 10% de R$ 7.000.000 = R$ 700.000.
+- **Redução de Custos por Erros**: 5% de R$ 7.000.000 = R$ 350.000.
+- **Aumento na Receita devido ao Robô**: 15% de R$ 10.000.000 = R$ 1.500.000.
 
 #### Estimativa de Lucro no Primeiro Ano:
-- Receita Total com Robô: R$ 10.000.000 + R$ 1.500.000 = R$ 11.500.000.
-- Custos Operacionais Totais com Robô: R$ 7.000.000 - (R$ 700.000 + R$ 350.000) = R$ 5.950.000.
-- Lucro Operacional com Robô: R$ 11.500.000 - R$ 5.950.000 = R$ 5.550.000.
-- Gastos com Manutenção Anual do Robô: R$ 50.000.
-- Lucro Líquido após Manutenção: R$ 5.550.000 - R$ 50.000 = R$ 5.500.000.
-- Lucro Líquido Hipotético no Primeiro Ano: R$ 5.500.000.
+- **Receita Total com Robô**: R$ 10.000.000 + R$ 1.500.000 = R$ 11.500.000.
+- **Custos Operacionais Totais com Robô**: R$ 7.000.000 - (R$ 700.000 + R$ 350.000) = R$ 5.950.000.
+- **Lucro Operacional com Robô**: R$ 11.500.000 - R$ 5.950.000 = R$ 5.550.000.
+- **Gastos com Manutenção Anual do Robô**: R$ 50.000.
+- **Lucro Líquido após Manutenção**: R$ 5.550.000 - R$ 50.000 = R$ 5.500.000.
+- **Lucro Líquido Hipotético no Primeiro Ano**: R$ 5.500.000.
 
 Esta hipótese de lucros leva em conta o investimento inicial como um gasto único, concentrando-se nos ganhos anuais proporcionados pelo robô. A redução nos custos operacionais e a diminuição de erros têm um papel crucial no incremento do lucro operacional. Adicionalmente, o aprimoramento na eficiência e no serviço ao cliente impulsiona o crescimento da receita. Comparativamente, os custos anuais de manutenção do robô são mínimos frente ao lucro operacional obtido.
 
