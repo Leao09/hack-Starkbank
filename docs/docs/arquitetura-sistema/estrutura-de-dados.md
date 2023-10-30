@@ -1,5 +1,7 @@
 # Estrutura de dados 
 
+A estrutura de dados proposta foca no desenvolvimento de um sistema robótico para o almoxarifado da Ambev, integrando automação e inteligência artificial. O objetivo é otimizar o gerenciamento de inventário e operações logísticas, enfatizando a eficiência e a precisão. Aspectos cruciais como gestão de estoque e experiência do usuário serão explorados.
+
 **1.  Gestão do estoque e validação de itens retirados**
     
 - Implementar um sistema de controle no robô, garantindo que os itens e quantidades retirados correspondam exatamente ao solicitado.

@@ -19,18 +19,18 @@ A expressão "matriz de oceano azul" origina-se do livro "Blue Ocean Strategy" (
 8. Comunicação entre os operadores e o almoxarife
 
 ### Aumentar
-- Eficiência na entrega
-- Precisão na disponibilidade
+- Eficiência na entrega: Garantir que os itens sejam fornecidos no tempo certo e no local correto. 
+- Precisão na disponibilidade: Usuários devem ter informações corretas sobre quais itens estão disponíveis e em que quantidade.
 
 ### Diminuir
-- Tempo de busca
-- Dificuldades de rastrear solicitações
+- Tempo de busca: Usuários podem localizar e acessar os itens desejados mais rapidamente.
+- Dificuldades de rastrear solicitações: Usuários podem acompanhar facilmente o status de suas solicitações, o que aumenta a transparência e a confiança no sistema.
 
 ### Criar
-- Praticidade na localização
-- Respostas imediatas e precisas
+- Praticidade na localização: Usuários não precisam gastar tempo desnecessário navegando pelo almoxarifado.
+- Respostas imediatas e precisas: Usuários podem tomar decisões informadas rapidamente, sem ter que esperar
 
 ### Eliminar
-- Deslocamento desnecessário 
-- Comunicação entre os operadores e o almoxarife
+- Deslocamento desnecessário: Usuários não precisam se mover sem propósito pelo almoxarifado, reduzindo o risco de acidentes ou danos aos itens.
+- Comunicação entre os operadores e o almoxarife: O sistema reduz possíveis erros de comunicação e garante que as solicitações sejam processadas com base em dados precisos e atualizados.
 
