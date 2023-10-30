@@ -1,5 +1,7 @@
 # Histórias de usuário
 
+As "user stories" são descrições breves que capturam o que um usuário deseja em um sistema, escritas de forma simples. No nosso projeto de almoxarifado automatizado, elas definem como os usuários, como operadores ou almoxarifes, esperam interagir com o sistema. Por exemplo: "Como operador, quero localizar rapidamente um item no almoxarifado". Utilizando "user stories", garantimos que o sistema atenda às necessidades reais dos usuários e facilite a comunicação entre a equipe e os stakeholders.
+
 <table>
     <tr>
         <th>Épico</th>
