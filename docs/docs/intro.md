@@ -5,6 +5,6 @@ slug: /
 
 # Intro
 
-## Documentação do grupo 5 - Naguide
+## Documentação do grupo 5 - NaviGuide
 
 https://github.com/2023M8T2-Inteli/grupo5 

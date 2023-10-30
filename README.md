@@ -6,7 +6,7 @@
 
 # Prototipação de um veículo autônomo
 
-## Nome do grupo
+## NaviGuide
 
 ## :student: Integrantes: 
 - <a href="https://www.linkedin.com/in/alysson-cordeiro-0684a8236/">Alysson Cordeiro</a>
