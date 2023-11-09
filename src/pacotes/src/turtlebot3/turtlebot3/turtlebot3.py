@@ -1,9 +1,9 @@
-#! /usr/bin/env python3 
 import rclpy
 from nav2_simple_commander.robot_navigator import BasicNavigator
 from geometry_msgs.msg import PoseStamped
 import tf_transformations
 from tf_transformations  import quaternion_from_euler
+import re
 
 class ControlTurltebot():
     def __init__(self):
@@ -13,6 +13,8 @@ class ControlTurltebot():
         self.initial_pose = self.create_initial_pose()
         self.nav.setInitialPose(self.initial_pose)
         self.nav.waitUntilNav2Active()
+        self.regex = r'.*?(ponto|prateleira|estante|local|peça|lugar|posi[çc][aã]o|[áa]rea|arm[áa]rio)?\s?([123])'
+
 
         self.coordenadas_dict = {
             "1": self.create_pose_stamped(self.nav, 0.0, 1.3, 0.0),
@@ -53,15 +55,21 @@ class ControlTurltebot():
 
     def create_waypoints(self):
         while True:
-            local = input("Insira o lugar de destino (1, 2 ou 3) ou 'q' para sair: ")
+            local = input("Para onde deseja ir? (Digite q para sair) ")
+            match = re.search(self.regex, local, re.IGNORECASE)
             if local == 'q':
                 self.nav.followWaypoints([self.create_pose_stamped(self.nav, 0.0, 0.0, 0.0)])
+                print("Vontando para a posição inicial...")
                 rclpy.shutdown()
                 break
-            if local in self.coordenadas_dict:
-                self.nav.followWaypoints([self.coordenadas_destino(local)])
+            if match:
+                print("Indo...")
+                numero_encontrado = match.group(2)  
+                self.nav.followWaypoints([self.coordenadas_destino(numero_encontrado)])
                 while not self.nav.isTaskComplete():
                     print(self.nav.getFeedback())
+            else:
+                print("Local indicado não mapeado.")
 
 if __name__ == '__main__':
     try:
