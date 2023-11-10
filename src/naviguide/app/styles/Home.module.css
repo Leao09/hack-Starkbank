@@ -1,0 +1,79 @@
+/* .homeContent {
+  } */
+  
+  .userProfile {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .userPhoto {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .userName {
+    margin-left: 10px; 
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .columns {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+  .textSection, .imageSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 50px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 70%;
+    text-align: left;
+    margin-left: 50px;
+  }
+  
+  .contentImage {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 100px;
+  }
+  
+  .blueButton {
+    background-color: #38aafa;
+    color: white;
+    border: none;
+    padding: 30px 50px;
+    border-radius: 200px;
+    margin: 10px; 
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .blueButton:hover {
+    background-color: #2a8bf2;
+  }
+  
