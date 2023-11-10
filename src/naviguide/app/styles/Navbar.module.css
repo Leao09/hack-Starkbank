@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #38aafa;
+    padding: 0 20px;
+    height: 60px;
+  }
+  
+  /* .logo {
+  } */
+  
+  .navItems {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navItem {
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .navItem:hover {
+    text-decoration: underline;
+  }
+  

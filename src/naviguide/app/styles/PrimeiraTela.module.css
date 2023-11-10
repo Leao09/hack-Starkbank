@@ -1,0 +1,94 @@
+.container {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .mainContent {
+    background-color: #ffffff;
+    height: 556px;
+    position: relative;
+    width: 963px;
+  }
+  
+  .button {
+    background-color: #38aafa;
+    border-radius: 134px;
+    color: #ffffff;
+    font-family: "Poppins-Bold", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 623px;
+    top: 386px;
+    width: 244px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button:hover {
+    background-color: #2a8bf2;
+  }
+  
+  .imageDirections {
+    position: absolute;
+    top: 114px;
+    left: 672px;
+    width: 146px;
+    height: 123px;
+  }
+  
+  .titleContainer {
+    position: absolute;
+    height: 99px;
+    left: 576px;
+    top: 264px;
+    width: 338px;
+  }
+  
+  .title {
+    color: #000000;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 29px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .description {
+    color: #767474;
+    font-family: "Poppins-Light", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  .robotImageContainer {
+    position: absolute;
+    height: 458px;
+    left: 65px;
+    top: 63px;
+    width: 446px;
+  }
+  
+  .robotImageBackground {
+    background-color: #f0f0f0;
+    border-radius: 67px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .robotImage {
+    position: absolute;
+    top: 127px;
+    width: 446px;
+    height: 203px;
+  }
+  
