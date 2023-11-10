@@ -17,8 +17,8 @@ class ControlTurltebot():
 
 
         self.coordenadas_dict = {
-            "1": self.create_pose_stamped(self.nav, 0.0, 1.3, 0.0),
-            "2": self.create_pose_stamped(self.nav, 2.0, 0.0, 0.0),
+            "1": self.create_pose_stamped(self.nav, 1.0, 0.0, 0.0),
+            "2": self.create_pose_stamped(self.nav, 1.3, 1.3, 0.0),
             "3": self.create_pose_stamped(self.nav, 1.5, -1.0, 0.0)
         }
 
