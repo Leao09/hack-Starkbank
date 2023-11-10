@@ -1,5 +1,6 @@
 "use client";
 import Navbar from '../components/navbar';
+import Icon from '../components/icon';
 import '../globals.css';
 import styles from '../styles/Home.module.css'
 import React, { useState } from 'react';
@@ -43,6 +44,7 @@ export default function Home() {
             <button className={styles.blueButton}>Busca de Peças</button>
           </div>
         </div>
+        <Icon />
       </>
     );
   }
