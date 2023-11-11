@@ -4,4 +4,4 @@ Esta documentação foi criada utilizando Docusaurus, uma ferramenta moderna par
 
 Docusaurus facilita a escrita e a manutenção da documentação, permitindo que nos concentremos no conteúdo, enquanto ele cuida do layout e da estrutura da página. Essa ferramenta torna a experiência de ler e navegar pela documentação mais agradável e acessível.
 
-Para visualizar basta clicar <a target="_blank" href="https://2023m8t2-inteli.github.io/grupo5/">aqui</a>
+Para visualizar basta clicar <a href="https://2023m8t2-inteli.github.io/grupo5/" target="_blank">aqui</a>
