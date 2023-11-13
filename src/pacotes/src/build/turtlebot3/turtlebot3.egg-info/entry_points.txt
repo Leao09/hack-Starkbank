@@ -1,3 +1,0 @@
-[console_scripts]
-turtlebot3 = turtlebot3.turtlebot3:main
-
