@@ -71,9 +71,12 @@ class ControlTurltebot():
             else:
                 print("Local indicado não mapeado.")
 
-if __name__ == '__main__':
+def main():
     try:
         t = ControlTurltebot()
         t.create_waypoints()
     except Exception as e:
         print("Erro na inicialização do robô: ", e)
+
+if __name__ == '__main__':
+    main()
