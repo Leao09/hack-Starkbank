@@ -29,8 +29,9 @@ Para a interface foi pensado tanto em telas para a utilização em um dispositiv
 
 ### Páginas web
 
-![Alt text](interfaceWeb.gif)
+<img src={require('img\interfaceWeb.gif).default} width='100%'/>
+
 
 ### Páginas robô
 
-![Alt text](interfacerobo.gif)
+<img src={require('img\interfacerobo.gif).default} width='100%'/>
