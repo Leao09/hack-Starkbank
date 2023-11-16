@@ -12,7 +12,7 @@ Quando isso for feito vai ser necesário usar as teclas w, a, s, d para fazer a 
 Para salvar o mapa é necesário rodar o comando a seguir:
 
 ´´´
-ros2 run nav2_map_server map_saver_cli -f <nome-do-mapa>
+ros2 run nav2_map_server map_saver_cli -f nome-do-mapa
 ´´´
 
 Comando que executa o launch file de movimentação do robô:
