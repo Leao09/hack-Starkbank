@@ -17,11 +17,10 @@ Para realizar essa movimentação, você deve colocar o robô na posição inici
 
 Veja o vídeo a seguir sobre a execução e desvios:
 
-<ReactPlayer playing controls url='/video/teste-video.mp4' />
 <video width="320" height="240" controls>
-          <source src='/video/teste-video.mp4' type="video/mp4" />
-          Your browser does not support the video tag.
+  <source src="./static/video/teste-video.mp4" type="video/mp4">
 </video>
+
 
 Em seguida, foi identificado que o tempo de resposta do envio de informações para execução do rôbo foi aproximadamente 10 segundos. Além disso, o teste de tempo de mapeamento do percurso completo dentro da área do perímetro foi de cerca de 1 minuto e 10 segundos. Nesse sentido, ambos tempos foram esperado como requisito.
 
