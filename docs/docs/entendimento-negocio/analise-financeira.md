@@ -139,7 +139,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
 </tr>   
 </table>
 
-Os custos com os funcionários CLT são baseados em pesquisas de mercado dos sites Catho e iDinheiro. Além dos salários base, foram inclusos benefícios como plano de saúde de R$ 600, Vale Transporte de R$ 400 e VR de R$ 600.
+Os custos com os funcionários CLT são baseados em pesquisas de mercado dos sites [Catho](https://paraempresas.catho.com.br/quanto-custa-um-funcionario-para-empresa/) e [iDinheiro](https://www.idinheiro.com.br/). Além dos salários base, foram inclusos benefícios como plano de saúde de R$ 600, Vale Transporte de R$ 400 e VR de R$ 600.
 
 ### Despesas com serviços da AWS
 Nessa tabela, as despesas relacionadas ao ambiente de desenvolvimento na AWS são distribuídas da seguinte forma:
