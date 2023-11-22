@@ -1,6 +1,7 @@
 "use client";
 import Navbar from '../components/navbar';
 import Icon from '../components/icon';
+import User from '../components/user';
 import '../globals.css';
 import styles from '../styles/Home.module.css'
 import React, { useState } from 'react';
@@ -22,12 +23,8 @@ export default function Home() {
     return (
       <>
         <Navbar />
+        <User />
         <div className={styles.homeContent}>
-          <div className={styles.userProfile}>
-            <img src="/profile.png" alt="User" className={styles.userPhoto} />
-            <span className={styles.userName}>Usuário X</span>
-          </div>
-
           <div className={styles.columns}>
             <div className={styles.textSection}>
               <p className={styles.title}>Bem vindo a home!</p>

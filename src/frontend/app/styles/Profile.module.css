@@ -1,0 +1,101 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.leftContainer {
+    width: 70%;
+}
+
+.rightContainer {
+    width: 30%;
+}
+
+.perfilContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  
+  .userInfo {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 1.25rem;
+  }
+  
+  .userName {
+    margin-left: 10px;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+  }
+  
+  .userForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .userForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #858585;
+    border-radius: 4px;
+  }
+  
+  .userForm button {
+    padding: 10px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 3rem;
+  }
+  
+  .userForm button:hover {
+    background-color: #0056b3;
+  }
+
+  .passwordGroup {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .eyeIcon {
+    position: absolute;
+    right: 20px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .label {
+    margin-bottom: 5px;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-weight: bold;
+  }
+
+  .formRow {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+  }
+  
+  

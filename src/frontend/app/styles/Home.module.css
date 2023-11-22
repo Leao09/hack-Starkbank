@@ -1,26 +1,6 @@
 /* .homeContent {
   } */
   
-  .userProfile {
-    display: flex;
-    align-items: center;
-    margin: 20px;
-  }
-  
-  .userPhoto {
-    width: 50px; 
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .userName {
-    margin-left: 10px; 
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
   .columns {
     display: flex;
     justify-content: center;
@@ -51,7 +31,7 @@
   }
   
   .contentImage {
-    width: 100%; 
+    width: 80%; 
     height: auto; 
   }
 
