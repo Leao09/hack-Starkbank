@@ -15,11 +15,9 @@ Outra situação importante a ser destacado foi a interatividade com  obstáculo
 
 Para realizar essa movimentação, você deve colocar o robô na posição inicial. Logo em seguida, na interface de linha de comando (CLI), abra o mapa do ambiente (Rviz) usando "python3 main.py". Será iniciado. Após isso, colocando a inserção de comandos como "mova-se para..." ou "desloque-se para...", por exemplo, acrescentado com o número da posição seguinte, ele se moverá para o ponto especificado. Vale lembrar que a inserção dos comandos com seus pontos deverá ser realizado a cada final de trajeto de um ponto ao outro.
 
-Veja o vídeo a seguir sobre a execução e desvios:
+Veja a seguir o vídeo com a execução e desvios:
 
-<video width="320" height="240" controls>
-  <source src="./static/video/teste-video.mp4" type="video/mp4">
-</video>
+[![Watch the video](https://img.youtube.com/vi/ibJ_DnxXIIY/maxresdefault.jpg)](https://www.youtube.com/embed/ibJ_DnxXIIY)
 
 
 Em seguida, foi identificado que o tempo de resposta do envio de informações para execução do rôbo foi aproximadamente 10 segundos. Além disso, o teste de tempo de mapeamento do percurso completo dentro da área do perímetro foi de cerca de 1 minuto e 10 segundos. Nesse sentido, ambos tempos foram esperado como requisito.
