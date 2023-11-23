@@ -26,11 +26,5 @@ Para a interface foi pensado tanto em telas para a utilização em um dispositiv
 - Apenas a prototipação da inteface do chat-bot  
 
 ## Demonstração de uso da interface
-
-### Páginas web
-
-
-
-
-### Páginas robô
+[Link](https://youtu.be/7ZDPgvFdBDM)
 
