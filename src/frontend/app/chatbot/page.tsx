@@ -1,10 +1,30 @@
 "use client";
-import React from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link';
 import styles from '../styles/chatbot.module.css';
 import '../globals.css';
 
 const ChatbotPage = () => {
+
+
+  const [inputText, setInputText] = useState('');
+
+  const handleInputChange = (event) => {
+    setInputText(event.target.value);
+  };
+
+  const handleSendClick = () => {
+    console.log(inputText)
+    setInputText('');
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleSendClick();
+    }
+  };
+
+
   return (
     <div className={styles.container}>
       
@@ -17,19 +37,21 @@ const ChatbotPage = () => {
 
 
       <div className={styles.instructionsContainer}>
-        
+
 
       <button type="button" className={styles.volumeIcon}>
         <img src="/volume-high.svg" alt="volume"/> 
       </button>
+
         <div className={styles.robotBlueIcon}>
           <img src='/blue-robot.png' alt='blue_robot'/>
         </div>
+
         <p className={styles.textoInserido}></p>
 
         <div className={styles.inputWithIcon}>
-          <input type="text" placeholder="Digite algo..." className={styles.input}/>
-          <button className={styles.sendIcon}>
+          <input type="text" placeholder="Digite algo..." className={styles.input} value={inputText} onChange={handleInputChange} onKeyDown={handleKeyPress}/>
+          <button className={styles.sendIcon} onClick={handleSendClick}>
               <img src="/send.png" alt="send"/> 
           </button>
 
