@@ -1,0 +1,33 @@
+  .userInfo {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: 4rem 0 2rem 4rem;
+  }
+  
+  .userName {
+    margin-left: 20px;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+  }
+  
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .searchBarContainer {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    margin-left: auto;
+  }
+  
+  .tableContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  

@@ -2,8 +2,8 @@
 import Navbar from '../components/navbar';
 import User from '../components/user';
 import Icon from '../components/icon';
+import Search from '../components/search';
 import Table from '../components/table';
-import Image from 'next/image';
 import styles from '../styles/History.module.css';
 import '../globals.css';
 
@@ -21,7 +21,14 @@ export default function History() {
             <span className={styles.wareHouseDescription}>Ambev</span>
           </div>
         </div>
-        <Table />
+        <div className={styles.mainContainer}>
+          <div className={styles.searchBarContainer}>
+            <Search />
+          </div>
+          <div className={styles.tableContainer}>
+            <Table />
+          </div>
+        </div>
         <Icon />
       </>
     );

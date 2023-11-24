@@ -1,0 +1,65 @@
+.container{
+    display: flex;
+    background: #39AAFB;
+    border-radius: 30px;
+    margin: 2rem;
+    padding: 4rem;
+}
+
+.instructionsContainer{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.title{
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 3rem;
+}
+
+.text{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: #3369FF;
+    border-radius: 30px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0.5rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    width: 40%;
+    margin-left: 2rem;
+}
+
+.button:hover{
+    background: #297bb5;
+    color: #FFF;
+    cursor: pointer;
+}
+  
+.botContainer{
+    display: flex;
+    width: 60%;
+}
