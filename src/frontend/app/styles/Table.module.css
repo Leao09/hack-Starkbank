@@ -1,0 +1,27 @@
+.tabela {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  
+  .tabela th {
+    background-color: #F5F5F5;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .tabela td {
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .tabela tr:nth-child(even) {background-color: #f2f2f2;}
+  
+  .tabela tr:hover {background-color: #ddd;}
+  
+  .selectedRow {
+    background-color: #EEE3FF;
+    color: #4005A0;
+  }
+  
