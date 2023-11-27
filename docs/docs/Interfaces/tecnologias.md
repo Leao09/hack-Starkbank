@@ -4,7 +4,7 @@
 
 Next.js é um framework de React que permite a construção de aplicações web de forma eficiente. Ele é amplamente utilizado para criar aplicações modernas e escaláveis, aproveitando ao máximo as capacidades do React.
 
-Para mais informações, visite [o site oficial do Next.js](https://nextjs.org)
+Para mais informações, visite [o site oficial do Next.js](https://nextjs.org/)
 
 ## CSS
 
