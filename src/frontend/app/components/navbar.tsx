@@ -9,10 +9,18 @@ const Navbar = () => {
         <Image src="/logo.png" alt="Logo" width={166} height={50} />
       </div>
       <div className={styles.navItems}>
-          <a className={styles.navItem}>Home</a>
-          <a className={styles.navItem}>Histórico</a>
-          <a className={styles.navItem}>Perfil</a>
-          <a className={styles.navItem}>Navegação</a>
+        <Link href="/home" className={styles.navItem}>
+          Home
+        </Link>
+        <Link href="/history" className={styles.navItem}>
+          Histórico
+        </Link>
+        <Link href="/profile" className={styles.navItem}>
+          Perfil
+        </Link>
+        <Link href="/navigate" className={styles.navItem}>
+          Navegação
+        </Link>
       </div>
     </nav>
   );
