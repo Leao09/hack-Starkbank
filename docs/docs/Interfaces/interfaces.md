@@ -3,7 +3,7 @@ Para a interface foi pensado tanto em telas para a utilização em um dispositiv
 
 ## Organizações das telas Web
 ### Tela inicial 
-- Nesta tele futuramente ficará o login, mas ela é uma tel bem ilustrativa como capa do sistema. 
+- Nesta tela futuramente ficará o login, mas ela é uma tela bem ilustrativa como capa do sistema. 
 ### Home 
 - A página de home foi projetada para conter as principais utilidades do sistema com a busca por peças ou a requisição de uma nova peça. Além disso, ela possui uma barra de navegação para levar para as outras páginas e funcionalidades do sistema. Por fim, no canto inferior direito está o botão para utilizar o chat-bot.
 
