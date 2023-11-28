@@ -4,7 +4,7 @@ from geometry_msgs.msg import PoseStamped
 import tf_transformations
 from tf_transformations  import quaternion_from_euler
 import re
-Cria
+
 class ControlTurltebot():
     def __init__(self):
         rclpy.init()
