@@ -43,4 +43,4 @@
 -   O bot utilizará o modelo LLM da OpenAI para responder às suas perguntas.
 
 O vídeo abaixo apresenta como deve ser realizada a última etapa:
-[Veja o video no youtube!](https://youtu.be/WwcymLsu2Hs)
+[![Veja o vídeo no youtube!](https://i3.ytimg.com/vi/WwcymLsu2Hs/maxresdefault.jpg)](https://youtu.be/WwcymLsu2Hs)
