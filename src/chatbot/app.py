@@ -44,11 +44,11 @@ async def generate_response(query, VectorStore):
     with get_openai_callback() as cb:
         response = chain.run(input_documents=docs, question=query)
         # Print the callback information
-        print(f"Total tokens used so far: {cb.total_tokens}")
-        print(f"Estimated total cost so far: {cb.total_cost}")
+        print(f"Número total de tokens utilizados: {cb.total_tokens}")
+        print(f"Custo estimado: {cb.total_cost}")
 
     end_time = time.time()  # End timing
-    print(f"Time taken for processing the response: {end_time - start_time} seconds")
+    print(f"Tempo total para processar a resposta: {end_time - start_time} seconds")
 
     return response
 
@@ -58,7 +58,7 @@ async def on_chat_start():
     # Wait for the user to upload a PDF file
     while files is None:
         files = await cl.AskFileMessage(
-            content="Please upload a PDF file to begin!", accept=["application/pdf"]
+            content="Por favor, faça o upload do seu PDF!", accept=["application/pdf"]
         ).send()
 
     pdf_file = files[0]
@@ -67,7 +67,7 @@ async def on_chat_start():
     cl.user_session.set("chunks", chunks)
     cl.user_session.set("store_name", store_name)
 
-    await cl.Message(content=f"`{pdf_file.name}` uploaded. You can now ask questions about your PDF.").send()
+    await cl.Message(content=f"`{pdf_file.name}` carregado com sucesso. Agora você pode fazer perguntas!").send()
 
 @cl.on_message
 async def main(message):
@@ -90,7 +90,7 @@ async def main(message):
         response_message = cl.Message(content=response)
         await response_message.send()
     else:
-        prompt_message = cl.Message(content="Please upload a PDF to start.")
+        prompt_message = cl.Message(content="Por favor, faça o upload do seu PDF!")
         await prompt_message.send()
 
 if __name__ == '__main__':
