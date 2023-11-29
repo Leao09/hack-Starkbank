@@ -122,4 +122,4 @@ A comparação entre o nosso chatbot LLM 3.5 e o ChatGPT-4 demonstrou que nosso 
 
 ## Vídeo demonstrativo dos testes realizados
 
-[Veja o vídeo no youtube!](https://www.youtube.com/watch?v=NWNzE8_hUo0)
+[![Veja o vídeo no youtube!](https://i3.ytimg.com/vi/NWNzE8_hUo0/maxresdefault.jpg)](https://youtu.be/NWNzE8_hUo0)
