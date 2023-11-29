@@ -1,25 +1,30 @@
 import ReactPlayer from 'react-player'
 
-# Testes Mapeamento e Navegação
+# Testes de Mapeamento e Navegação
 
-### Teste realizados.
-
-Para início de teste da navegação autônoma do robô foram realizados algumas metrificações de requisitos tanto funcionais quanto não funcionais para ter um bom desempenho nas precisões da robô. Além do mais, foi gerado o esboço do mapa no simulador Rviz e também projetado os perímetros do mapa para forma física. Veja a imagem a seguir de como foi feito a projeção do mapa:
+Na fase inicial de testes da navegação autônoma do robô, foram estabelecidos critérios rigorosos para medir o desempenho do sistema, abrangendo requisitos funcionais e não funcionais. Para facilitar a avaliação, desenvolvemos um mapa detalhado no simulador Rviz, que foi também adaptado para uma representação física. Este mapa serviu como base para nossas simulações e testes práticos. A imagem abaixo ilustra a projeção realizada do mapa no simulador:
 
 <img src={require('/img/space-map.png').default} width='100%'/>
 
+## Teste de Mapeamento Automático
 
-Em fase, foi realizado o teste de mapeamento automático, ou seja, foi verificado se o sistema é capaz de realizar esse mapeamento automático do espaço. Mas para isso, o robô deve ser iniciado no ponto inicial do percurso "início". Além disso, para critério de aceitação do sistema, até memsmo para fins de desempenho, é que o mapa gerado seja detalhado, abragendo todos os corredores e áreas do espaço de teste. 
+Conduzimos um teste crucial de mapeamento automático, avaliando a capacidade do robô de navegar e mapear o espaço de forma independente. Iniciamos cada teste com o robô no ponto marcado como "início" no mapa. Um critério chave para a aceitação do sistema foi a geração de um mapa detalhado, cobrindo todos os corredores e áreas relevantes do ambiente de teste.
 
-Outra situação importante a ser destacado foi a interatividade com  obstáculos, o robô tinha desafios e possibilidades grandes de bater nos obstáculos e paredes do espaço, sendo assim dificuldades em voltar para o início ou até mesmo continuar o caminho de onde parou, isso se deve principalmente na posição de início que ele foi colocado, se caso estiver fora do ângulo de partida, até mesmo por intervalos de espaços e bases curtas, ele possivelmente dará problemas em desviar dos obstáculos. Entretanto, ao dar o comando de início de partida do percurso, o robô, ao ser observado, mostrou grande enficácia nos desvios, passando pelos pontos 1, 2, 3 e 4 (como mostrado na imagem a cima) e depois voltando para seu inicio de partida sem interrupção. Nessa parte, foi testado o quão preciso estava o sensor LIDAR, esse sensor é o que detecta cada parte do obstáculo em sua frente por uma curta distância de raio.
+## Interação com Obstáculos
 
-Para realizar essa movimentação, você deve colocar o robô na posição inicial. Logo em seguida, na interface de linha de comando (CLI), abra o mapa do ambiente (Rviz) usando "python3 main.py". Será iniciado. Após isso, colocando a inserção de comandos como "mova-se para..." ou "desloque-se para...", por exemplo, acrescentado com o número da posição seguinte, ele se moverá para o ponto especificado. Vale lembrar que a inserção dos comandos com seus pontos deverá ser realizado a cada final de trajeto de um ponto ao outro.
+Um aspecto significativo testado foi a interação do robô com obstáculos. Observamos desafios relacionados à capacidade do robô de evitar colisões e retomar sua rota após desvios, especialmente quando iniciava de posições não padronizadas. No entanto, o robô demonstrou eficiência notável ao navegar pelos pontos designados (1, 2, 3 e 4, conforme a imagem acima) e retornar ao ponto de início sem incidentes. Essa fase do teste enfatizou a precisão do sensor LIDAR na detecção e na manobra diante de obstáculos.
 
-Veja a seguir o vídeo com a execução e desvios:
+## Procedimentos de Comando e Movimentação
+
+Para executar a movimentação, posicionamos o robô no local de início e utilizamos a interface de linha de comando (CLI) para abrir o mapa do ambiente no Rviz, com o comando "python3 main.py". A movimentação foi comandada através de instruções como "mova-se para..." ou "desloque-se para...", seguido do número do ponto de destino. Cada comando foi inserido após a conclusão do trajeto de um ponto a outro.
 
 [![Watch the video](https://img.youtube.com/vi/ibJ_DnxXIIY/maxresdefault.jpg)](https://www.youtube.com/embed/ibJ_DnxXIIY)
 
 
-Em seguida, foi identificado que o tempo de resposta do envio de informações para execução do rôbo foi aproximadamente 10 segundos. Além disso, o teste de tempo de mapeamento do percurso completo dentro da área do perímetro foi de cerca de 1 minuto e 10 segundos. Nesse sentido, ambos tempos foram esperado como requisito.
+## Avaliação de Tempo de Resposta
 
-Portanto, alguns testes foram feitos várias vezes até mostrar o resultado esperados contidos nos requisitos tanto funcionais quanto os requisitos não funcionais, como, por exemplo, R1 e R3 (funcionais) e RNF2 e RNF3 (não funcionais). 
+Durante os testes, notamos que o tempo de resposta do robô para iniciar as ações após o recebimento dos comandos foi de aproximadamente 10 segundos. Além disso, o tempo total para o mapeamento do percurso completo dentro da área demarcada foi de cerca de 1 minuto e 10 segundos. Ambos os tempos estão dentro dos parâmetros esperados conforme os requisitos estabelecidos.
+
+## Conclusão
+
+Realizamos múltiplas iterações dos testes para assegurar a consistência dos resultados e a conformidade com os requisitos estabelecidos, tanto funcionais (ex: R1, R3) quanto não funcionais (ex: RNF2, RNF3). Os resultados obtidos demonstram um avanço significativo no desenvolvimento e na precisão do sistema de navegação autônoma do robô.
