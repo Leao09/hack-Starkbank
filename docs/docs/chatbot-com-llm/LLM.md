@@ -41,7 +41,8 @@ Para implementar este recurso, utilizamos bibliotecas como Langchain e Chainlit.
 - Com base nos documentos relevantes e na pergunta, o chatbot gera uma resposta.
 - A resposta é então enviada de volta para o usuário através da interface Chainlit.
 
-<img src="https://github.com/2023M8T2-Inteli/grupo5/blob/main/media/images/arquitetura_chat_bot.png" alt="Arquitetura Chat Bot" width="100%" />
+<img src="https://raw.githubusercontent.com/2023M8T2-Inteli/grupo5/main/media/images/arquitetura_chat_bot.png" alt="Arquitetura Chat Bot" width="100%" />
+
 
 
 
