@@ -12,6 +12,7 @@ from langchain.callbacks import get_openai_callback
 from langchain.chat_models import ChatOpenAI
 import chainlit as cl
 import time
+import re
 
 load_dotenv()
 openai.api_key = os.environ.get("OPENAI_API_KEY")
@@ -86,12 +87,26 @@ async def main(message):
             with open(f"{store_name}.pkl", "wb") as f:
                 pickle.dump(VectorStore, f)
 
+        formatted_query = query_formatting(query)
+        print(formatted_query)
+
         response = await generate_response(query, VectorStore)
-        response_message = cl.Message(content=response)
+        response_message = cl.Message(content=response[1])
         await response_message.send()
     else:
         prompt_message = cl.Message(content="Please upload a PDF to start.")
         await prompt_message.send()
+
+##Para a integração com o robô:
+async def query_formatting(query):
+    regex = r'.*?(ponto|prateleira|estante|local|peça|lugar|posi[çc][aã]o|[áa]rea|arm[áa]rio)?\s?([123])'
+    match = re.search(regex, query, re.IGNORECASE)
+    if match:
+        ponto = match.group(2)
+        formatted = f"Ponto {ponto}"
+        return formatted
+    else:
+        return "Error"
 
 if __name__ == '__main__':
     cl.run()
