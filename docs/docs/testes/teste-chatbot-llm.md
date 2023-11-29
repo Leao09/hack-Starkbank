@@ -89,7 +89,7 @@ Este teste avalia a integração de um arquivo PDF com informações sobre peça
 
 O teste demonstrou a capacidade do sistema de chatbot LLM em integrar e processar dados de um arquivo PDF, fornecendo respostas contextualizadas em um tempo de resposta adequado. A transparência no uso de recursos e o feedback sobre o desempenho são aspectos positivos, contribuindo para a melhoria contínua do sistema.
 
-### 2.3 Comparação do Chatbot LLM com o ChatGPT-4
+### 2.3 Desempenho do Chatbot LLM com API ChatGPT 3.5 Turbo Versus ChatGPT-4
 
 #### Descrição do Teste
 
@@ -121,3 +121,5 @@ Este teste compara o desempenho do nosso chatbot baseado no modelo LLM da OpenAI
 A comparação entre o nosso chatbot LLM 3.5 e o ChatGPT-4 demonstrou que nosso sistema é altamente eficaz e competitivo. Embora haja espaço para melhorias na contextualização, as respostas fornecidas estão em um nível de precisão comparável ao ChatGPT-4, destacando o potencial e a eficácia do nosso chatbot no contexto do almoxarifado da AmBev.
 
 ## Vídeo demonstrativo dos testes realizados
+
+[Veja o vídeo no youtube!](https://www.youtube.com/watch?v=NWNzE8_hUo0)
