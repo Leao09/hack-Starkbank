@@ -14,9 +14,6 @@ import chainlit as cl
 import time
 import re
 
-load_dotenv()
-openai.api_key = os.environ.get("OPENAI_API_KEY")
-
 # Function to preprocess uploaded PDF
 async def preprocess_pdf(pdf_content):
     with open("temp.pdf", "wb") as f:
@@ -93,6 +90,7 @@ async def main(message):
         response = await generate_response(query, VectorStore)
         response_message = cl.Message(content=response[1])
         await response_message.send()
+
     else:
         prompt_message = cl.Message(content="Please upload a PDF to start.")
         await prompt_message.send()
@@ -110,3 +108,4 @@ async def query_formatting(query):
 
 if __name__ == '__main__':
     cl.run()
+
