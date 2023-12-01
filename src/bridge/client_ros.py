@@ -35,9 +35,14 @@ class ClientSocket:
 
     def callback(self, msg: Any) -> None:
         print(msg)
-        pattern = re.compile(r'\[(-?\d+(\.\d+)?), (-?\d+(\.\d+)?), (-?\d+(\.\d+)?)\]')
+        pattern = re.compile(r'\[x:(?P<x>-?\d+), y:(?P<y>-?\d+)\]')
         match = pattern.search(msg)
-        self.publish_points.timer_callback(match.group())
+
+        if match:
+            x = int(match.group("x"))
+            y = int(match.group("y"))
+            resultado = [x, y]
+            self.publish_points.timer_callback(str(resultado))
 
 
 if __name__ == "__main__":
