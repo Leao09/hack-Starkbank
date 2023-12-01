@@ -1,11 +1,10 @@
 "use client";
 import React, {useState} from 'react';
 import Link from 'next/link';
-import styles from '../styles/chatbot.module.css';
+import styles from '../styles/chatbotModal.module.css';
 import '../globals.css';
 
-const ChatbotPage = () => {
-
+const ChatbotModal = () => {
 
   const [inputText, setInputText] = useState('');
 
@@ -64,4 +63,4 @@ const ChatbotPage = () => {
   );
 }
 
-export default ChatbotPage;
+export default ChatbotModal;

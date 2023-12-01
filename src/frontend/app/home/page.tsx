@@ -6,6 +6,7 @@ import '../globals.css';
 import styles from '../styles/Home.module.css';
 import React, { useState } from 'react';
 import Modal from '../components/modal';
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -41,7 +42,9 @@ export default function Home() {
           <div className={styles.buttons}>
             <button className={styles.blueButton} onClick={handleOpenModal}>Nova Requisição</button>
             {isModalOpen && <Modal onClose={handleCloseModal} />}
-            <button className={styles.blueButton}>Busca de Peças</button>
+            <Link href="/history">
+              <button className={styles.blueButton}>Busca de Peças</button>
+            </Link>
           </div>
         </div>
         <Icon />
