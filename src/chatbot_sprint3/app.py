@@ -1,3 +1,5 @@
+# Importação das bibliotecas
+
 import os
 import openai
 import pickle
@@ -12,17 +14,25 @@ from langchain.callbacks import get_openai_callback
 from langchain.chat_models import ChatOpenAI
 import chainlit as cl
 import time
-import re
 
-# Function to preprocess uploaded PDF
+# Carrega as variáveis de ambiente do arquivo .env
+load_dotenv()
+# Configura a chave de API da OpenAI
+openai.api_key = os.environ.get("OPENAI_API_KEY")
+
+# Função para pré-processar um PDF carregado
 async def preprocess_pdf(pdf_content):
+    # Salva o conteúdo do PDF em um arquivo temporário
     with open("temp.pdf", "wb") as f:
         f.write(pdf_content)
+    # Lê o arquivo PDF
     pdf_reader = PdfReader("temp.pdf")
     text = ""
+    # Extrai o texto de cada página do PDF
     for page in pdf_reader.pages:
         text += page.extract_text() or ''
 
+    # Divide o texto em pedaços para processamento
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
         chunk_overlap=200,
@@ -31,50 +41,63 @@ async def preprocess_pdf(pdf_content):
     chunks = text_splitter.split_text(text=text)
     return chunks
 
-# Function to generate response based on the query
+# Função para gerar uma resposta com base na consulta
 async def generate_response(query, VectorStore):
-    start_time = time.time()  # Start timing
+    start_time = time.time()  # Inicia a contagem do tempo
 
+    # Busca documentos similares à consulta
     docs = VectorStore.similarity_search(query=query, k=3)
 
+    # Configura o modelo de linguagem da OpenAI
     llm = ChatOpenAI(model_name='gpt-3.5-turbo')
+
+    # Carrega a cadeia de questionamento e resposta
     chain = load_qa_chain(llm=llm, chain_type="stuff")
     with get_openai_callback() as cb:
+        # Executa a cadeia e obtém a resposta
         response = chain.run(input_documents=docs, question=query)
-        # Print the callback information
-        print(f"Total tokens used so far: {cb.total_tokens}")
-        print(f"Estimated total cost so far: {cb.total_cost}")
+        # Imprime informações sobre o uso de tokens
+        print(f"Número total de tokens utilizados: {cb.total_tokens}")
+        print(f"Custo estimado: {cb.total_cost}")
 
-    end_time = time.time()  # End timing
-    print(f"Time taken for processing the response: {end_time - start_time} seconds")
+    end_time = time.time()   # Termina a contagem do tempo
+    print(f"Tempo total para processar a resposta: {end_time - start_time} seconds")
 
     return response
 
+# Função para iniciar o chat
 @cl.on_chat_start
 async def on_chat_start():
     files = None
-    # Wait for the user to upload a PDF file
+    # Aguarda o usuário fazer upload de um arquivo PDF
     while files is None:
         files = await cl.AskFileMessage(
-            content="Please upload a PDF file to begin!", accept=["application/pdf"]
+            content="Por favor, faça o upload do seu PDF!", accept=["application/pdf"]
         ).send()
 
+    # Processa o arquivo PDF carregado
     pdf_file = files[0]
     chunks = await preprocess_pdf(pdf_file.content)
+    # Salva os pedaços do texto e o nome do arquivo na sessão do usuário
     store_name = pdf_file.name.split('.')[0]
     cl.user_session.set("chunks", chunks)
     cl.user_session.set("store_name", store_name)
 
-    await cl.Message(content=f"`{pdf_file.name}` uploaded. You can now ask questions about your PDF.").send()
+    # Envia mensagem de confirmação de carregamento do arquivo
+    await cl.Message(content=f"`{pdf_file.name}` carregado com sucesso. Agora você pode fazer perguntas!").send()
 
+# Função principal para responder mensagens
 @cl.on_message
 async def main(message):
     query = message.content
+    # Obtém os pedaços do texto e o nome do arquivo da sessão do usuário
     chunks = cl.user_session.get("chunks")
     store_name = cl.user_session.get("store_name")
 
+    # Verifica se o PDF foi carregado e processado
     if chunks and store_name:
-        # Load or create VectorStore
+
+        # Carrega ou cria um VectorStore
         if os.path.exists(f"{store_name}.pkl"):
             with open(f"{store_name}.pkl", "rb") as f:
                 VectorStore = pickle.load(f)
@@ -83,16 +106,14 @@ async def main(message):
             VectorStore = FAISS.from_texts(chunks, embedding=embeddings)
             with open(f"{store_name}.pkl", "wb") as f:
                 pickle.dump(VectorStore, f)
-
-        formatted_query = query_formatting(query)
-        print(formatted_query)
-
+                
+        # Gera e envia a resposta
         response = await generate_response(query, VectorStore)
         response_message = cl.Message(content=response[1])
         await response_message.send()
 
     else:
-        prompt_message = cl.Message(content="Please upload a PDF to start.")
+        prompt_message = cl.Message(content="Por favor, faça o upload do seu PDF!")
         await prompt_message.send()
 
 ##Para a integração com o robô:
