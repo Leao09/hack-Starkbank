@@ -1,8 +1,5 @@
-from flask import Flask, request
-from langchain.chat_models import ChatOpenAI
-from langchain.schema import AIMessage, HumanMessage, SystemMessage
-import os
-from dotenv import load_dotenv
+from fastapi import FastAPI, Request
+from pydantic import BaseModel
 import socketio
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
@@ -10,22 +7,25 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
+from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
 SERVER_URL = "http://localhost:3000"
-
 sio = socketio.Client()
-
 sio.connect(SERVER_URL)
 
-app = Flask(__name__)
+app = FastAPI()
 
-@app.route('/')
+class DataModel(BaseModel):
+    dados: str
+
+@app.get('/')
 def home():
-    return 'Bem-vindo ao Flask!'
+    return 'Bem-vindo ao FastAPI!'
 
-def connect_gpt(data):
+def connect_gpt(data: str):
 
     reader = PdfReader('./data/inventario_simulado_amoxarifado.pdf')
     
@@ -56,16 +56,11 @@ def connect_gpt(data):
 
     return response
 
-
-@app.route('/enviar_dados', methods=['POST'])
-def receber_dados():
-    dados = request.json  
-
-    resposta = connect_gpt(dados['dados'])
-
+@app.post('/enviar_dados')
+def receber_dados(data: DataModel):
+    resposta = connect_gpt(data.dados)
     return resposta
 
-
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
