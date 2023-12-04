@@ -55,7 +55,7 @@ const Modal: React.FC<ModalProps> = ({ onClose }) => {
                 <button className={`${styles.button} ${styles.registerButton}`} onClick={handleConfirm}>Enviar</button>
             </div>
         </div>
-        </>
+    </>
     );
 }
 

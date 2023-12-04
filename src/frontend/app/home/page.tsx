@@ -7,11 +7,13 @@ import styles from '../styles/Home.module.css';
 import React, { useState } from 'react';
 import Modal from '../components/modal';
 import Link from 'next/link';
+import ChatbotModal from '../components/chatbotModal';
 
 
 export default function Home() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isChatbotModalOpen, setIsChatbotModalOpen] = useState(false);
   
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -19,6 +21,14 @@ export default function Home() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleOpenChatbotModal = () => {
+    setIsChatbotModalOpen(true);
+  };
+
+  const handleCloseChatbotModal = () => {
+    setIsChatbotModalOpen(false);
   };
 
     return (
@@ -47,7 +57,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <Icon />
+        <button onClick={handleOpenChatbotModal}>
+          <Icon />
+        </button>
+        {isChatbotModalOpen && <ChatbotModal onClose={handleCloseChatbotModal} />}
       </>
     );
   }
