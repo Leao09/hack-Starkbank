@@ -4,4 +4,4 @@
 
 - SPRINT 2 (10/11/2023): [Link do PDF](https://github.com/2023M8T2-Inteli/grupo5/blob/main/arquivos/apresentacoes/Sprint%202%20-%20NAVIGUIDE.pdf)
 
-- SPRINT 3 (24/11/2023): [LINK DO PDF](https://github.com/2023M8T2-Inteli/grupo5/blob/main/arquivos/apresentacoes/Sprint%203%20-%20NAVIGUIDE.pdf)
+- SPRINT 3 (24/11/2023): [Link do PDF](https://github.com/2023M8T2-Inteli/grupo5/blob/main/arquivos/apresentacoes/Sprint%203%20-%20NAVIGUIDE.pdf)
