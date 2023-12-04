@@ -38,10 +38,9 @@ const ChatbotPage = () => {
 
       <div className={styles.instructionsContainer}>
 
-
-      <button type="button" className={styles.volumeIcon}>
-        <img src="/volume-high.svg" alt="volume"/> 
-      </button>
+        <button type="button" className={styles.volumeIcon}>
+          <img src="/volume-high.svg" alt="volume"/> 
+        </button>
 
         <div className={styles.robotBlueIcon}>
           <img src='/blue-robot.png' alt='blue_robot'/>

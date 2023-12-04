@@ -12,14 +12,11 @@ const Navbar = () => {
         <Link href="/home" className={styles.navItem}>
           Home
         </Link>
-        <Link href="/history" className={styles.navItem}>
+        <Link href="/navigate" className={styles.navItem}>
           Histórico
         </Link>
         <Link href="/profile" className={styles.navItem}>
           Perfil
-        </Link>
-        <Link href="/navigate" className={styles.navItem}>
-          Navegação
         </Link>
       </div>
     </nav>

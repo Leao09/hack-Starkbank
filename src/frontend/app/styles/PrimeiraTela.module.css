@@ -15,6 +15,7 @@
   
   .button {
     background-color: #38aafa;
+    text-decoration: none;
     border-radius: 134px;
     color: #ffffff;
     font-family: "Poppins-Bold", sans-serif;

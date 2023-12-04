@@ -6,10 +6,8 @@ export default function PrimeiraTela() {
   return (
     <div className={styles.container}>
       <div className={styles.mainContent}>
-      <Link href="/home" passHref>
-        <button className={styles.button}>
-          <span>Iniciar</span>
-        </button>
+      <Link href="/home" className={styles.button}>
+          Iniciar
       </Link>
         <Image src="/directions.png" alt="Directions" width={219} height={185} className={styles.imageDirections} />
         <div className={styles.titleContainer}>
