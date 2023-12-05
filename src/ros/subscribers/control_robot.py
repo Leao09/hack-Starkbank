@@ -55,7 +55,7 @@ class ControlTurltebot(Node):
         self.get_logger().info('I heard: "%s"' % msg.data)
         self.points = eval(msg.data)
         print(self.points)
-        self.nav.followWaypoints([self.create_pose_stamped(self.nav, float(self.points[0])/100, float(self.points[1])/100, 0.0)])
+        self.nav.followWaypoints([self.create_pose_stamped(self.nav, float(self.points[0]), float(self.points[1]), 0.0)])
 
 
 def main(args=None):
