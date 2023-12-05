@@ -205,3 +205,7 @@ Werkzeug==3.0.1
 wsproto==1.2.0
 xacro==2.0.8
 yarl==1.9.3
+uvicorn
+pyPDF2
+python-socketio
+python-dotenv
