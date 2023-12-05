@@ -36,7 +36,7 @@ class Historic(ormar.Model):
 
 class Warehouse(ormar.Model):
     class Meta(BaseMeta):
-        tablename = "historic"
+        tablename = "warehouse"
         
     id: int = ormar.Integer(primary_key=True)
     Name: str = ormar.String(max_length=128,nullable=False)

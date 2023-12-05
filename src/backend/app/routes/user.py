@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, Body
-from app.model import UserSchema
-from app.db import database, User
+from model import UserSchema
+from db import database, User
 
 app = APIRouter()
 
