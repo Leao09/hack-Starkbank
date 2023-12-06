@@ -1,15 +1,14 @@
 "use client";
-import React, {useState} from 'react';
+import React, { KeyboardEvent, ChangeEvent, useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/chatbot.module.css';
 import '../globals.css';
 
 const ChatbotPage = () => {
 
-
   const [inputText, setInputText] = useState('');
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputText(event.target.value);
   };
 
@@ -18,11 +17,15 @@ const ChatbotPage = () => {
     setInputText('');
   };
 
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: KeyboardEvent) => {
     if (event.key === 'Enter') {
       handleSendClick();
     }
   };
+
+  const handleMicrophoneClick = () => {
+    console.log('microphone click')
+  }
 
 
   return (
@@ -54,7 +57,7 @@ const ChatbotPage = () => {
               <img src="/send.png" alt="send"/> 
           </button>
 
-          <button className={styles.microphoneIcon}>
+          <button onClick={handleMicrophoneClick} className={styles.microphoneIcon}>
               <img src="/microphone-2.svg" alt="microfone"/> 
           </button>
         </div>
