@@ -3,19 +3,17 @@
 import os
 import openai
 import pickle
-import whisper
-import bark
-import time
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
-from langchain.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.callbacks import get_openai_callback
 from langchain.chat_models import ChatOpenAI
 import chainlit as cl
+import time
+import requests
 
 # Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()
@@ -64,8 +62,12 @@ async def generate_response(query, VectorStore):
 
     end_time = time.time()   # Termina a contagem do tempo
     print(f"Tempo total para processar a resposta: {end_time - start_time} seconds")
+    
+    response_url = "http://localhost:5000/"
+    audio_response = requests.get(response_url, params={'text': response}).content
 
-    return response
+    # Return both text and audio responses
+    return response, audio_response
 
 # Função para iniciar o chat
 @cl.on_chat_start
@@ -110,24 +112,19 @@ async def main(message):
                 pickle.dump(VectorStore, f)
                 
         # Gera e envia a resposta
-        response = await generate_response(query, VectorStore)
-        response_message = cl.Message(content=response[1])
-        await response_message.send()
+            # n: Call the modified generate_response function
+        text_response, audio_response = await generate_response(query, VectorStore)
 
+        # n: Sending the audio response as a file
+        # n: In Chainlit, you may need to adjust how audio data is sent to the client
+        elements = [cl.Audio(name="resposta", display="inline", content=audio_response)]
+        
+        # n: Send both text and audio responses
+        text_message = cl.Message(elements=elements, content=text_response)
+        await text_message.send()
     else:
         prompt_message = cl.Message(content="Por favor, faça o upload do seu PDF!")
         await prompt_message.send()
-
-##Para a integração com o robô:
-async def query_formatting(query):
-    regex = r'.*?(ponto|prateleira|estante|local|peça|lugar|posi[çc][aã]o|[áa]rea|arm[áa]rio)?\s?([123])'
-    match = re.search(regex, query, re.IGNORECASE)
-    if match:
-        ponto = match.group(2)
-        formatted = f"Ponto {ponto}"
-        return formatted
-    else:
-        return "Error"
 
 if __name__ == '__main__':
     cl.run()
