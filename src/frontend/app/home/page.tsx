@@ -52,7 +52,7 @@ export default function Home() {
           <div className={styles.buttons}>
             <button className={styles.blueButton} onClick={handleOpenModal}>Nova Requisição</button>
             {isModalOpen && <Modal onClose={handleCloseModal} />}
-            <Link href="/history">
+            <Link href="/search">
               <button className={styles.blueButton}>Busca de Peças</button>
             </Link>
           </div>
