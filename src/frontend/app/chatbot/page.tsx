@@ -2,18 +2,32 @@
 import React, { KeyboardEvent, ChangeEvent, useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/chatbot.module.css';
+import axios from 'axios';
 import '../globals.css';
 
 const ChatbotPage = () => {
 
   const [inputText, setInputText] = useState('');
+  const [audioFile, setAudioFile] = useState(null);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputText(event.target.value);
   };
 
-  const handleSendClick = () => {
-    console.log(inputText)
+  const handleSendClick = async () => {
+    console.log('send click')
+    if (inputText) {
+      try {
+        const response = await axios.post('http://localhost:8000/tts/', { text: inputText });
+        if (response.data) {
+          const audioUrl = URL.createObjectURL(new Blob([response.data]));
+          const audio = new Audio(audioUrl);
+          audio.play();
+        }
+      } catch (error) {
+        console.error('Erro ao enviar texto para TTS:', error);
+      }
+    }
     setInputText('');
   };
 
@@ -23,8 +37,22 @@ const ChatbotPage = () => {
     }
   };
 
-  const handleMicrophoneClick = () => {
-    console.log('microphone click')
+  const handleMicrophoneClick = async () => {
+    if (audioFile) {
+      const formData = new FormData();
+      formData.append('file', audioFile);
+
+      try {
+        const response = await axios.post('http://localhost:8000/audio-to-text/', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        });
+        console.log(response.data);
+      } catch (error) {
+        console.error('Erro ao enviar áudio para transcrição:', error);
+      }
+    }
   }
 
 
