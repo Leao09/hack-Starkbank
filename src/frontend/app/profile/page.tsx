@@ -6,11 +6,22 @@ import Icon from '../components/icon';
 import styles from '../styles/Profile.module.css'; 
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import '../globals.css';
+import ChatbotModal from '../components/chatbotModal';
 
 
 export default function Profile() {
 
     const [showPassword, setShowPassword] = useState(false);
+
+    const [isChatbotModalOpen, setIsChatbotModalOpen] = useState(false);
+
+    const handleOpenChatbotModal = () => {
+      setIsChatbotModalOpen(true);
+    };
+  
+    const handleCloseChatbotModal = () => {
+      setIsChatbotModalOpen(false);
+    };
 
     const togglePasswordVisibility = () => {
       setShowPassword(showPassword => !showPassword);
@@ -89,7 +100,10 @@ export default function Profile() {
             <img src="/profileGraph.png" alt="Foto pessoa" />
           </div>
         </div>
-        <Icon />
+        <button onClick={handleOpenChatbotModal}>
+          <Icon />
+        </button>
+        {isChatbotModalOpen && <ChatbotModal onClose={handleCloseChatbotModal} />}
       </>
     );
   }
