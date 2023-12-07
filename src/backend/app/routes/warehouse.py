@@ -10,34 +10,32 @@ async def read_Warehouse():
     if not database.is_connected:
         await database.connect()
 
-    return await Historic.objects.all()
+    return await Warehouse.objects.all()
 
 
 @app.post("/warehouse")
-async def create_Warehouse(hist: HistoricSchema = Body(default=None)):
+async def create_Warehouse(ware: WarehouseSchema = Body(default=None)):
     if not database.is_connected:
         await database.connect()
 
-    await Historic.objects.create(Id_P=hist.Id_P,
-                                  Name=hist.Name,
-                                  Name_P=hist.Name_P,
-                                  amount=hist.amount)
+    await Warehouse.objects.create(Name=ware.Name,
+                                  Status=ware.Status,
+                                  Amout=ware.Amout)
     return {"success": "Successfully created"}
 
 
 @app.put("/warehouse")
-async def update_Warehouse(new_Hist: HistoricSchema):
+async def update_Warehouse(new_Ware: WarehouseSchema):
     if not database.is_connected:
         await database.connect()
-    return await Historic.objects.update_or_create(id=new_Hist.id,
-                                               Id_P=new_Hist.Id_P,
-                                               Name=new_Hist.Name,
-                                               Name_P=new_Hist.Name_P,
-                                               amount=new_Hist.amount)
+    return await Warehouse.objects.update_or_create(id=new_Ware.id,
+                                               Name=new_Ware.Name,
+                                               Status=new_Ware.Status,
+                                               Amout=new_Ware.Amout)
 
 
-@app.delete("/historic/{Id}")
+@app.delete("/warehouse/{Id}")
 async def delete_Warehouse(Id: int):
     if not database.is_connected:
         await database.connect()
-    return await Historic.objects.delete(id=Id)
+    return await Warehouse.objects.delete(id=Id)

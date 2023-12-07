@@ -3,6 +3,7 @@ from db import database
 
 from routes.user import app as user_router
 from routes.historic import app as historic_router
+from routes.warehouse import app as warehouse_router
 
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
@@ -19,6 +20,7 @@ app.add_middleware(
 
 app.include_router(user_router)
 app.include_router(historic_router)
+app.include_router(warehouse_router)
 
 @app.on_event("startup")
 async def startup():
