@@ -34,6 +34,12 @@
     margin-top: -20px;
 }
 
+.containerModalSaida{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+}
+
 .input{
     display: flex;
     height: 65px;

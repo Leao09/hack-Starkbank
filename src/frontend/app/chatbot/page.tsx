@@ -58,24 +58,23 @@ const ChatbotPage = () => {
 
   return (
     <div className={styles.container}>
-      
-      <Link href="/instructions">
-        <button type="button" className={styles.backIcon}>
-          <img src="/arrow-left.png" alt="back"/> 
-        </button>
-      </Link>
-      
-
+      <div className={styles.containerModalSaida}>
+        <Link href="/instructions">
+          <button type="button" className={styles.backIcon}>
+            <img src="/arrow-left.png" alt="back"/> 
+          </button>
+        </Link>
+        
+        <div className={styles.robotBlueIcon}>
+            <img src='/blue-robot.png' alt='blue_robot'/>
+        </div>
+      </div>
 
       <div className={styles.instructionsContainer}>
 
         <button type="button" className={styles.volumeIcon}>
           <img src="/volume-high.svg" alt="volume"/> 
         </button>
-
-        <div className={styles.robotBlueIcon}>
-          <img src='/blue-robot.png' alt='blue_robot'/>
-        </div>
 
         <p className={styles.textoInserido}></p>
 
