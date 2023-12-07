@@ -26,4 +26,4 @@ app = socketio.WSGIApp(sio)
 # Rodar o servidor
 if __name__ == '__main__':
     print('Iniciando o servidor SocketIO...')
-    eventlet.wsgi.server(eventlet.listen(('', 3000)), app)
+    eventlet.wsgi.server(eventlet.listen(('', 5000)), app)

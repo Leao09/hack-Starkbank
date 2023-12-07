@@ -5,6 +5,7 @@ import styles from '../styles/chatbotModal.module.css';
 import axios from 'axios';
 import '../globals.css';
 
+
 declare global {
   interface Window {
     webkitSpeechRecognition: any;
@@ -26,7 +27,24 @@ interface ModalProps {
   const [isRecording, setIsRecording] = useState(false);
   const [messageHistory, setMessageHistory] = useState<Message[]>([]);
   const recognitionRef = useRef<any>(null);
+  const [audioUrl, setAudioUrl] = useState('/speech.mp3');
 
+  const refreshAudio = () => {
+    const newAudioUrl = `/speech.mp3?timestamp=${new Date().getTime()}`;
+    setAudioUrl(newAudioUrl);
+  };
+
+  useEffect(() => {
+    refreshAudio();
+  }, []);
+
+  useEffect(() => {
+    const messagesContainer = document.querySelector("." + styles.messagesContainer);
+    if (messagesContainer) {
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+  }, [messageHistory]);
+  
   const onCloseButton = () => {
    console.log("Botão clicado");
    onClose();
@@ -46,10 +64,8 @@ interface ModalProps {
       try {
         const response = await axios.post('http://localhost:8000/tts/', { text: inputText });
         if (response.data) {
-          const audioUrl = URL.createObjectURL(new Blob([response.data]));
-          const audio = new Audio(audioUrl);
-          audio.play();
-          addToMessageHistory('Simulando resposta', 'bot');
+          addToMessageHistory('Ele está no corredor 3', 'bot');
+          refreshAudio();
         }
       } catch (error) {
         console.error('Erro ao enviar texto para TTS:', error);
@@ -107,23 +123,23 @@ interface ModalProps {
       <div className={styles.backdrop}> </div>
       <div className={styles.modal}>
         <div className={styles.container}>
-          
+          <div className={styles.containerModalSaida}>
             <button onClick={onCloseButton} type="button" className={styles.backIcon}>
               <img src="/arrow-left.png" alt="back"/> 
             </button>
-          
-
-          <div className={styles.instructionsContainer}>
-
-            <button type="button" className={styles.volumeIcon}>
-              <img src="/volume-high.svg" alt="volume"/> 
-            </button>
-
+            
             <div className={styles.robotBlueIcon}>
-              <img src='/blue-robot.png' alt='blue_robot'/>
+                <img src='/blue-robot.png' alt='blue_robot'/>
             </div>
-
-            <p className={styles.textoInserido}></p>
+          </div>
+          
+          <div className={styles.instructionsContainer}>
+            <div className={styles.teste}>
+              <p className={styles.textoInserido}></p>
+              <button type="button" className={styles.volumeIcon}>
+                <audio controls src={audioUrl} />
+              </button>
+            </div>
 
             <div className={styles.messagesContainer}>
               {messageHistory.map((msg, index) => (
