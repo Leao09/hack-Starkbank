@@ -62,13 +62,18 @@ interface ModalProps {
     if (inputText) {
       addToMessageHistory(inputText, 'user');
       try {
-        const response = await axios.post('http://localhost:8000/tts/', { text: inputText });
-        if (response.data) {
-          addToMessageHistory('Ele está no corredor 3', 'bot');
-          refreshAudio();
+        const responseChatbot = await axios.post('http://localhost:8000/enviar_dados', { dados: inputText });
+        addToMessageHistory(responseChatbot.data, 'bot');
+        try {
+          const response = await axios.post('http://localhost:8000/tts/', { text: responseChatbot.data });
+          if (response.data) {
+            refreshAudio();
+          }
+        } catch (error) {
+          console.error('Erro ao enviar texto para TTS:', error);
         }
       } catch (error) {
-        console.error('Erro ao enviar texto para TTS:', error);
+        console.error('Erro ao enviar texto para o chatbot:', error);
       }
     }
     setInputText('');
@@ -149,6 +154,7 @@ interface ModalProps {
                 >
                   {msg.message}
                 </div>
+                
               ))}
             </div>
 

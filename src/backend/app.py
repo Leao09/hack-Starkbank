@@ -73,8 +73,7 @@ def connect_gpt(data: str):
         x = int(match.group("x"))/100
         y = int(match.group("y"))/100
         coordinates = [x, y]
-
-    sio.emit('enqueue', str(coordinates))
+        #sio.emit('enqueue', str(coordinates))
 
     return response
 

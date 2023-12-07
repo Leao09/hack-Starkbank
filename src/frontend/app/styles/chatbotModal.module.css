@@ -110,7 +110,7 @@
 .sendIcon{
     border: none;
     position: absolute;
-    left: 85%;
+    left: 95%;
     cursor: pointer;
     width: auto;
     height: auto;
@@ -130,7 +130,7 @@
 .microphoneIcon{
     border: none;
     position: absolute;
-    left: 70%;
+    left: 88%;
     cursor: pointer;
     width: auto;
     height: auto;
