@@ -3,6 +3,32 @@
     src:url('/fonts/static/Nunito-Regular.ttf') format('truetype');
 }
 
+.messagesContainer {
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .message {
+    clear: both;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+  }
+  
+  .userMessage {
+    float: right;
+    background-color: #e0e0e0;
+  }
+  
+  .botMessage {
+    float: left;
+    background-color: #f0f0f0;
+  }
+
 .inputWithIcon{
     display: flex;
     align-items: center;
