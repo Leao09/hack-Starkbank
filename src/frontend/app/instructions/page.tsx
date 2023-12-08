@@ -19,16 +19,11 @@ export default function History() {
               <Image src="/iconNoBorder.png" alt="Play" width={40} height={40} />
               <span>Iniciar</span>
           </Link>
-          
-          <Link href="/home" className={styles.button}>
-              <Image src="/iconNoBorder.png" alt="backHome" width={40} height={40} />
-              <span>Voltar</span>
-          </Link>
 
         </div>
 
         <div className={styles.botContainer}>
-          <img src="/profileGraph.png" alt="Bot"/>
+          <img className={styles.image} src="/botExample.png" alt="Bot"/>
         </div>
 
       </div>

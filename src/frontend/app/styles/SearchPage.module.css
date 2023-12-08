@@ -1,0 +1,50 @@
+.wareHouseInfo {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+
+  .wareHouseImg {
+    width: 130px;
+    height: 130px;
+    margin-left: 20px;
+  }
+  
+  .titleDescription{
+    margin-left: 2rem;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .wareHouseTitle {
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+  }
+
+  .wareHouseDescription {
+    color: #39AAFB;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .searchBarContainer {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+  }
+  
+  .tableContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  

@@ -3,6 +3,9 @@
 import os
 import openai
 import pickle
+import whisper
+import bark
+import time
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -13,7 +16,6 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.callbacks import get_openai_callback
 from langchain.chat_models import ChatOpenAI
 import chainlit as cl
-import time
 
 # Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()

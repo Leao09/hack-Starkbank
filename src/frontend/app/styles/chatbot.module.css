@@ -20,7 +20,8 @@
     width: auto;
     margin-top: 20px;
     margin-bottom: -30px;
-   
+    height: 600px;
+    width: 1024px;
 }
 
 .instructionsContainer{
@@ -31,6 +32,12 @@
     padding: 0 1rem;
     background: #fff;
     margin-top: -20px;
+}
+
+.containerModalSaida{
+    display: flex;
+    justify-content: center;
+    align-items: left;
 }
 
 .input{
@@ -101,7 +108,6 @@
     border: none;
     position: relative;
     left: 35px;
-    top: 30px;
     margin: 0;
 }
 .volumeIcon{

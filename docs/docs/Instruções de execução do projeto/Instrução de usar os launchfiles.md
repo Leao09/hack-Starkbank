@@ -7,8 +7,6 @@ Após a conclusão das instalações mencionadas anteriormente, você pode come�
 Para iniciar o processo de mapeamento, use o seguinte comando:
 
 ```
-bash
-Copy code
 ros2 launch turtlebot3 launch.py
 ```
 
@@ -21,8 +19,6 @@ Após iniciar o launch file de mapeamento, utilize as teclas w, a, s, d para con
 Uma vez que o mapeamento estiver completo, você pode salvar o mapa gerado com o seguinte comando:
 
 ```
-bash
-Copy code
 ros2 run nav2_map_server map_saver_cli -f nome-do-mapa
 ```
 
@@ -33,8 +29,6 @@ Substitua nome-do-mapa pelo nome desejado para o arquivo do mapa. Esse passo é 
 Para operar o robô em um modo de movimentação, que pode incluir navegação autônoma ou seguimento de trajetórias pré-definidas, execute o comando a seguir:
 
 ```
-bash
-Copy code
 ros2 launch turtlebot3 movementlaunch.py
 ```
 

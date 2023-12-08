@@ -18,9 +18,6 @@ const Navbar = () => {
         <Link href="/profile" className={styles.navItem}>
           Perfil
         </Link>
-        <Link href="/navigate" className={styles.navItem}>
-          Navegação
-        </Link>
       </div>
     </nav>
   );

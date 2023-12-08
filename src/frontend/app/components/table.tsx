@@ -1,42 +1,46 @@
-import React, { useState } from 'react';
-import styles from '../styles/Table.module.css'; 
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import styles from '../styles/Table.module.css';
 
 const Table = () => {
-const [selectedRow, setSelectedRow] = useState<number | null>(null);
-  const data = [
-    { nome: "Item 1", id: "ID1", status: "Disponível", quantidade: 10 },
-    { nome: "Item 2", id: "ID2", status: "Disponível", quantidade: 20 },
-    { nome: "Item 3", id: "ID3", status: "Disponível", quantidade: 30 },
-    { nome: "Item 4", id: "ID4", status: "Disponível", quantidade: 40 },
-    { nome: "Item 5", id: "ID5", status: "Disponível", quantidade: 50 },
-  ];
+    const [tableData, setTableData] = useState([]);
+    const [selectedRow, setSelectedRow] = useState<number | null>(null);
 
-  return (
-    <table className={styles.tabela}>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>ID</th>
-          <th>Status estoque</th>
-          <th>Quantidade</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((item, index) => (
-          <tr
-            key={index}
-            className={selectedRow === index ? styles.selectedRow : ""}
-            onClick={() => setSelectedRow(index)}
-          >
-            <td>{item.nome}</td>
-            <td>{item.id}</td>
-            <td>{item.status}</td>
-            <td>{item.quantidade}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
+    useEffect(() => {
+        // Ao montar o componente, fazer a requisição GET para obter dados da tabela
+        axios.get('http://127.0.0.1:8000/historic')
+            .then(response => setTableData(response.data))
+            .catch(error => console.error('Erro ao obter dados da tabela:', error));
+    }, []);
+
+    return (
+        <table className={styles.tabela}>
+            <thead>
+                <tr>
+                    <th>Id SAS</th>
+                    <th>Nome usuário</th>
+                    <th>Nome Produto</th>
+                    <th>Quantidade</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                {tableData.map((item, index) => (
+                    <tr
+                        key={index}
+                        className={selectedRow === index ? styles.selectedRow : ""}
+                        onClick={() => setSelectedRow(index)}
+                    >
+                        <td>{item.Id_P}</td>
+                        <td>{item.Name}</td>
+                        <td>{item.Name_P}</td>
+                        <td>{item.amount}</td>
+                        <td>{item.data}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    );
 };
 
 export default Table;
