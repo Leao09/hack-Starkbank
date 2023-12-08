@@ -8,7 +8,7 @@ const Table = () => {
 
     useEffect(() => {
         // Ao montar o componente, fazer a requisição GET para obter dados da tabela
-        axios.get('http://127.0.0.1:8000/historic')
+        axios.get('http://127.0.0.1:8000/warehouse')
             .then(response => setTableData(response.data))
             .catch(error => console.error('Erro ao obter dados da tabela:', error));
     }, []);
@@ -17,11 +17,9 @@ const Table = () => {
         <table className={styles.tabela}>
             <thead>
                 <tr>
-                    <th>Id SAS</th>
-                    <th>Nome usuário</th>
-                    <th>Nome Produto</th>
+                    <th>Nome</th>
+                    <th>Status</th>
                     <th>Quantidade</th>
-                    <th>Data</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,11 +29,9 @@ const Table = () => {
                         className={selectedRow === index ? styles.selectedRow : ""}
                         onClick={() => setSelectedRow(index)}
                     >
-                        <td>{item.Id_P}</td>
                         <td>{item.Name}</td>
-                        <td>{item.Name_P}</td>
-                        <td>{item.amount}</td>
-                        <td>{item.data}</td>
+                        <td>{item.Status ? 'Contém' : 'Esgotado'}</td>
+                        <td>{item.Amout}</td>
                     </tr>
                 ))}
             </tbody>

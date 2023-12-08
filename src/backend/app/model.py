@@ -1,10 +1,10 @@
 from pydantic import BaseModel, Field
-
+from datetime import date
 class WarehouseSchema(BaseModel):
     id : int = Field(default=None, gt=0)
     Name: str = Field(default=None)
     Status: bool = Field(default=None)
-    Amount: int = Field(default=None)
+    Amout: int = Field(default=None)
 
 class UserSchema(BaseModel):
     id : int = Field(default=None, gt=0)
@@ -18,4 +18,5 @@ class HistoricSchema(BaseModel):
     Id_P: int = Field(default=None, gt=0)
     Name: str = Field(default=None) 
     Name_P: str = Field(default=None)
-    Amount: int = Field(default=None)
+    amount: int = Field(default=None)
+    data:  date = Field(default=None)

@@ -1,7 +1,7 @@
 import databases
 import ormar
 import sqlalchemy
-
+from datetime import date
 from config import settings
 
 database = databases.Database(settings.db_url)
@@ -16,7 +16,6 @@ class BaseMeta(ormar.ModelMeta):
 class User(ormar.Model):
     class Meta(BaseMeta):
         tablename = "user"
-
     Id: int = ormar.Integer(primary_key=True)
     Name: str = ormar.String(max_length=128,nullable=False)
     Last_Name: str = ormar.String(max_length=128,nullable=False)
@@ -32,6 +31,8 @@ class Historic(ormar.Model):
     Id_P: int = ormar.Integer(foreing_key=True,nullable=False)
     Name: str = ormar.String(max_length=128,nullable=False)
     Name_P: str = ormar.String(max_length=128,nullable=False)
+    amount: int = ormar.Integer(nullable=False)
+    data: date = ormar.Date(nullable=False)
 
 
 class Warehouse(ormar.Model):
