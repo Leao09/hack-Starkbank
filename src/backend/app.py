@@ -41,7 +41,7 @@ def home():
 
 def connect_gpt(data: str):
 
-    reader = PdfReader('./data/inventario_simulado_amoxarifado.pdf')
+    reader = PdfReader('./data/inventario_simulado.pdf')
     
     if reader is not None:
         raw_text = ''
@@ -66,14 +66,13 @@ def connect_gpt(data: str):
         docs = knowledge_base.similarity_search(query)
         response = chain.run(input_documents=docs, question=query)
     
-    pattern = re.compile(r'\[x:(?P<x>-?\d+), y:(?P<y>-?\d+)\]')
+    pattern = re.compile(r'\[x\s*:\s*(?P<x>-?\d*(?:\.\d+)?),\s*y\s*:\s*(?P<y>-?\d*(?:\.\d+)?)\]')
     match = pattern.search(response)
-
     if match:
-        x = int(match.group("x"))/100
-        y = int(match.group("y"))/100
+        x = match.group("x")
+        y = match.group("y")
         coordinates = [x, y]
-        #sio.emit('enqueue', str(coordinates))
+        sio.emit('enqueue', str(coordinates))
 
     return response
 
