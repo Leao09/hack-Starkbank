@@ -8,7 +8,7 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 sio = socketio.Client()
-sio.connect("http://0.0.0.0:3000")
+sio.connect("http://0.0.0.0:5000")
 
 
 class PublishPoints(Node):
