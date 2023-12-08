@@ -17,11 +17,11 @@ async def read_Historic():
 async def create_Historic(hist: HistoricSchema = Body(default=None)):
     if not database.is_connected:
         await database.connect()
-
     await Historic.objects.create(Id_P=hist.Id_P,
                                   Name=hist.Name,
                                   Name_P=hist.Name_P,
-                                  amount=hist.amount)
+                                  amount=hist.amount,
+                                  data = hist.data)
     return {"success": "Successfully created"}
 
 
@@ -33,7 +33,8 @@ async def update_Historic(new_Hist: HistoricSchema):
                                                Id_P=new_Hist.Id_P,
                                                Name=new_Hist.Name,
                                                Name_P=new_Hist.Name_P,
-                                               amount=new_Hist.amount)
+                                               amount=new_Hist.amount,
+                                               data=new_Hist.data)
 
 
 @app.delete("/historic/{Id}")

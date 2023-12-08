@@ -1,7 +1,7 @@
 import databases
 import ormar
 import sqlalchemy
-
+from datetime import date
 from config import settings
 
 database = databases.Database(settings.db_url)
@@ -32,6 +32,7 @@ class Historic(ormar.Model):
     Name: str = ormar.String(max_length=128,nullable=False)
     Name_P: str = ormar.String(max_length=128,nullable=False)
     amount: int = ormar.Integer(nullable=False)
+    data: date = ormar.Date(nullable=False)
 
 
 class Warehouse(ormar.Model):
