@@ -3,7 +3,7 @@
     "position": 2,
     "link": {
       "type": "generated-index",
-      "description": "Na Sprint 2, focamos em aprimorar um robô de serviço para mapear e navegar autonomamente em ambientes pré-definidos, controlado via interface CLI. Adicionalmente, desenvolvemos um protótipo de interface gráfica para a visualização de requisições e controle do sistema desenvolvido."
+      "description": "Na Sprint 2, desenvolvemos um robô de serviço com o TurtleBot3 Burger para mapear e navegar autonomamente em ambientes pré-definidos, controlado via interface CLI. Adicionalmente, desenvolvemos um protótipo de interface gráfica para a visualização de requisições e controle do sistema desenvolvido."
     }
   }
   
