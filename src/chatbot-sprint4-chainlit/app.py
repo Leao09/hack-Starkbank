@@ -66,7 +66,7 @@ async def generate_response(query, VectorStore):
     response_url = "http://localhost:5000/"
     audio_response = requests.get(response_url, params={'text': response}).content
 
-    # Return both text and audio responses
+    # Retorna o texto e audio na resposta
     return response, audio_response
 
 # Função para iniciar o chat
@@ -112,14 +112,12 @@ async def main(message):
                 pickle.dump(VectorStore, f)
                 
         # Gera e envia a resposta
-            # n: Call the modified generate_response function
         text_response, audio_response = await generate_response(query, VectorStore)
 
-        # n: Sending the audio response as a file
-        # n: In Chainlit, you may need to adjust how audio data is sent to the client
+        # Envia o audio de resposta como um arquivo
         elements = [cl.Audio(name="resposta", display="inline", content=audio_response)]
         
-        # n: Send both text and audio responses
+        # Envia as respostas em audio e texto
         text_message = cl.Message(elements=elements, content=text_response)
         await text_message.send()
     else:

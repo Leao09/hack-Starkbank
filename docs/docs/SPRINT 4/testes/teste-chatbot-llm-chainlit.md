@@ -1,4 +1,4 @@
-# Avaliação do Chatbot com LLM da OpenAI 
+# Avaliação do Chatbot com Chaintlit e LLM da OpenAI 
 
 Nesta seção, apresentamos uma documentação detalhada dos testes realizados com o Chatbot idealizado com LLM da OpenAI, adaptado para o contexto do almoxarifado da AmBev. Os testes foram projetados para avaliar a eficácia do sistema em atender aos requisitos não funcionais, com foco na rapidez de resposta e na capacidade de processar e contextualizar informações de um arquivo PDF para responder perguntas de usuários. Abaixo está incluído um vídeo que demonstra o teste realizado. 
 
