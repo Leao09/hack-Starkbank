@@ -1,4 +1,4 @@
-# Documentação do uso do ChatBot LLM com Node.js e API da OpenAI
+# Documentação do uso do ChatBot LLM com Next.js e API da OpenAI
 
 ## Implementação com a API da OpenAI
 
