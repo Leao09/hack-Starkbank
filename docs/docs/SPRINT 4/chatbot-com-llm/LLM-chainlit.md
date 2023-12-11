@@ -34,7 +34,7 @@ Devido a utilização da api para um modelo treinado por uma compania a realiza�
 
 **2. Pré-processamento e Preparação dos Dados:**
 
-- Conversão de Áudio em Texto: Quando o usuário opta por falar, a gravação de áudio é transcrita em texto, utilizando a API de reconhecimento de fala da OpenAI.
+- Conversão de Áudio em Texto: Quando o usuário opta por falar, a gravação de áudio é transcrita em texto por meio da biblioteca ```react-speech-recognition``` na interface do Chainlit.
 
 **3. Processamento da Consulta:**
 
@@ -45,10 +45,11 @@ Devido a utilização da api para um modelo treinado por uma compania a realiza�
 - Respostas em Texto e Áudio: As respostas são geradas em texto e, simultaneamente, convertidas em áudio.
 - API de Texto-para-Voz da OpenAI: A conversão de texto em áudio é realizada utilizando a API TTS (Text-to-Speech) da OpenAI. Esta API transforma o texto gerado pelo modelo GPT-3.5 em fala natural, utilizando vozes sintéticas.
 
-**5. Servidor para Conversão de Texto em Áudio:**
+**5. Servidor para Conversão de Texto em Áudio das Respostas:**
 
-- Servidor Flask Independente: Um servidor Flask é configurado para lidar especificamente com a funcionalidade de geração de áudio. Este servidor interage com a API TTS da OpenAI, recebendo o texto e retornando o áudio correspondente.
-- Fluxo de Resposta de Áudio: Quando uma resposta em áudio é requisitada, o texto gerado pelo chatbot é enviado ao servidor Flask, que então utiliza a API da OpenAI para gerar a resposta de áudio e enviá-la de volta à interface do usuário.
+- Servidor Flask: Configuração de um servidor Flask para gerenciar a conversão de texto em áudio. Este servidor interage com a API TTS da OpenAI, convertendo texto em áudio para a interface do Chainlit.
+
+- Fluxo de Resposta de Áudio: O texto gerado pelo chatbot é enviado ao servidor Flask que utilizando a API da OpenAI, gera a resposta em áudio e a retorna para a interface do usuário.
 
 <img src="https://raw.githubusercontent.com/2023M8T2-Inteli/grupo5/main/media/images/arquitetura_chat_bot.png" alt="Arquitetura Chat Bot" width="100%" />
 
