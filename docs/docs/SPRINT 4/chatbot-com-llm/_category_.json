@@ -1,0 +1,9 @@
+{
+    "label": "Chatbot com LLM",
+    "position": 9,
+    "link": {
+      "type": "generated-index",
+      "description": "Esta seção documenta o uso do Large Language Model (LLM) no chatbot, destacando a implementação da API da OpenAI com o Chat-GPT 3-5 turbo e a integração de funcionalidades de leitura de documentos PDF para contextualização precisa das respostas e a eficiência de custo. Ela abrange desde a explicação técnica do LLM até os detalhes práticos da implementação, incluindo a escolha de bibliotecas como Langchain e Streamlit, e a utilização estratégica de um PDF simulado para testar a aplicação em um contexto realista."
+    }
+  }
+  

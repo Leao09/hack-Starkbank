@@ -1,0 +1,9 @@
+# Equidade e justiça
+
+A automação é reconhecida como um processo que busca otimizar processos, contudo, para que desigualdades não aconteçam é de suma importância que o trabalho humano seja levado em consideração nas decisões a serem tomadas. O treinamento contínuo de novas habilidades é fundamental para que funcionários mantenham seus valores na corporação, sempre ganhando novas oportunidades de adaptação à medida que a automação cresce. Este enfoque está em consonância com o Objetivo de Desenvolvimento Sustentável (ODS) 8 - Trabalho Decente e Crescimento Econômico, que visa promover o emprego produtivo e o trabalho decente para todos.
+
+Na perspectiva de inclusão e acessibilidade, o sistema do robô se destaca pela sua projeção de autoatendimento ser de fácil acesso para todas as pessoas via comandos de voz ou texto. Isso garante que funcionários com deficiências não sejam excluídos dessa tecnologia, alinhando-se com a Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência - Lei nº 13.146/2015), que promove a inclusão e acessibilidade.
+
+Economicamente, a empresa assegura uma distribuição equitativa dos benefícios trazidos pela eficiência e produtividade melhorada, não apenas para a corporação, mas também para seus funcionários. Isso se alinha com a proteção rigorosa da privacidade e dos dados dos funcionários, conforme estabelecido pela Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), assegurando que as informações pessoais sejam manuseadas com o mais alto grau de segurança e ética.
+
+Por fim, a conformidade legal e ética é um pilar essencial do projeto. Este alinhamento com as normas trabalhistas vigentes e os valores éticos da Ambev reforçará o compromisso da empresa com a responsabilidade social e corporativa. Dessa forma, o projeto de automação com robôs não apenas busca melhorias na eficiência operacional, mas também procura fomentar um ambiente de trabalho mais justo, inclusivo e ético.
