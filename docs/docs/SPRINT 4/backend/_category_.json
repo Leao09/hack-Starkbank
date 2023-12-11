@@ -3,6 +3,6 @@
     "position": 9,
     "link": {
       "type": "generated-index",
-      "description": "Esta seção do documento aborda aspectos do backend de um sistema robótico. Inclui detalhes sobre a implementação de interfaces para dispositivos web e integradas ao robô, focando em elementos do backend como processamento de requisições, gerenciamento de dados, e comunicação entre servidores e o robô.Esta seção do documento aborda aspectos do backend de um sistema robótico. Inclui detalhes sobre a implementação de interfaces para dispositivos web e integradas ao robô, focando em elementos do backend como processamento de requisições, gerenciamento de dados, e comunicação entre servidores e o robô."
+      "description": "Esta seção aborda a descrição do backend do sistema que desenvolvemos. Inclui elementos do backend como processamento de requisições, gerenciamento de dados, e comunicação entre servidores e o robô."
     }
   }
