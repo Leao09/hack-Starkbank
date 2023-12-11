@@ -3,32 +3,33 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 
-# Load environment variables
+# Carregar variáveis de ambiente
 load_dotenv()
 
-# Initialize Flask application
+# Inicializar aplicação Flask
 app = Flask(__name__)
 
-# Initialize OpenAI client with API key from .env file
+# Inicializar cliente OpenAI com chave da API do arquivo .env
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 @app.route("/")
 def hello_world():
-    # Get the input text from query parameter
+    # Obter o texto de entrada do parâmetro de consulta
     input_text = request.args.get('text', '')
 
-    # Generate speech using OpenAI's API
+    # Gerar fala usando a API da OpenAI
     response = client.audio.speech.create(
         model="tts-1",
         voice="alloy",
         input=input_text
     )
 
-    # Fetch audio data using the content property
+    # Obter dados de áudio usando a propriedade content
     audio_data = response.content
 
-    # Return audio data as a response
+    # Retornar dados de áudio como uma resposta
     return Response(audio_data, mimetype="audio/mpeg")
 
 if __name__ == "__main__":
     app.run(debug=True)
+
