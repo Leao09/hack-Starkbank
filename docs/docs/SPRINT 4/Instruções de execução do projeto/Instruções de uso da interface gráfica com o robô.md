@@ -147,3 +147,5 @@ Além do mais, dentro do modal tem alguns botões de ações. Estes são:
 E, por fim, a navegação e a usabilidade que é de fácil acesso, pois o chatbot pode ser acessado a qualquer momento, oferecendo suporte contínuo ao usuário. sem contar que tem respostas instantâneas, visto que o sistema de chatbot é projetado para fornecer respostas instantâneas e relevantes, facilitando a experiência do usuário.
 
 `*NOTA: veja o vídeo embaixo para uma melhor compreensão da navegabilidade da interface até a conexão com o robô.*`
+
+[![vídeo](doc/../../../../static/img/Telahome.png)](https://www.youtube.com/watch?v=6A9NSQRbdrI)
