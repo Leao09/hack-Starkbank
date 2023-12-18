@@ -1,0 +1,9 @@
+{
+    "label": "Instruções de execução do projeto",
+    "position": 7,
+    "link": {
+      "type": "generated-index",
+      "description": "Este guia fornece instruções detalhadas para a instalação e execução do pacote Turtlebot. Ele inicia com a instalação dos pacotes, detalhando os pré-requisitos (Ubuntu, ROS, Nav2), o processo de clonagem do repositório, instalação das dependências, e a compilação e configuração do pacote para uso com o ROS. Após a instalação, o guia orienta sobre como executar os launch files do Turtlebot, explicando como iniciar o mapeamento do ambiente e controlar o robô manualmente para explorar eficientemente, além de fornecer os comandos para salvar o mapa gerado."
+    }
+  }
+  
