@@ -1,0 +1,9 @@
+{
+    "label": "Mapeamento e Navegação",
+    "position": 5,
+    "link": {
+      "type": "generated-index",
+      "description": "Este documento fornece um guia completo para o setup e configurações do robô Turtlebot 3 Burger, detalhando desde a instalação do Ubuntu Server 22.04 no Raspberry Pi até a compilação de pacotes específicos como o LIDAR LDS-02 e o setup do OpenCR. Ele abrange a conexão SSH com o Raspberry Pi, instalação do ROS Humble, e os procedimentos para configurar o Turtlebot3 para mapeamento, incluindo comandos para movimentar o robô e salvar mapas criados."
+    }
+  }
+  

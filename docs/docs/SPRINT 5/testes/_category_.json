@@ -1,0 +1,9 @@
+{
+    "label": "Testes de funcionalidades",
+    "position": 8,
+    "link": {
+      "type": "generated-index",
+      "description": "Esta seção abrange testes abrangentes e detalhados do projeto, focando na interação eficiente do chatbot com LLM da OpenAI e na precisão do sistema de mapeamento e navegação do robô, demonstrando a integração bem-sucedida de tecnologias avançadas para otimizar operações e interações em ambientes complexos."
+    }
+  }
+  

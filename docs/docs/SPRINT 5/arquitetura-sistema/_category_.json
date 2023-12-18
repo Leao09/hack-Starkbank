@@ -1,0 +1,9 @@
+{
+    "label": "Arquitetura do sistema",
+    "position": 3,
+    "link": {
+      "type": "generated-index",
+      "description": "Nesta seção, veremos os fundamentos estruturais do nosso projeto. Aqui, você encontrará informações detalhadas sobre a concepção, o design e a organização do sistema robótico, desenvolvido para otimizar as operações na Ambev. Isso é crucial para entender como diferentes componentes do sistema interagem e funcionam em conjunto para atingir eficiência, precisão e confiabilidade."
+    }
+  }
+  

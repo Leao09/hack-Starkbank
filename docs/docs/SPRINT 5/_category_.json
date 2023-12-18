@@ -1,0 +1,9 @@
+{
+    "label": "SPRINT 4",
+    "position": 4,
+    "link": {
+      "type": "generated-index",
+      "description": "Na Sprint 4, realizamos uma transformação significativa na interface do chatbot, substituindo a solução baseada em Chainlit por uma interface customizada desenvolvida em Node.js. Este avanço foi crucial para aprimorar a acessibilidade e a interatividade do sistema. Focamos especialmente no desenvolvimento de uma interface gráfica intuitiva para as funcionalidades de texto para fala (TTS) e fala para texto (STT), visando uma experiência de usuário mais fluida e natural. Paralelamente, dedicamo-nos à integração e aos testes do sistema completo, que engloba o sistema de fala, o LLM e a navegação do robô, com um olhar atento para a automação dos testes e a acessibilidade do sistema como um todo."
+    }
+  }
+  

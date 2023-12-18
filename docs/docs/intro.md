@@ -3,7 +3,7 @@ sidebar_position: 0
 slug: /
 ---
 
-# Intro
+# Introdução
 
 ## Documentação do grupo 5 - NaviGuide
 

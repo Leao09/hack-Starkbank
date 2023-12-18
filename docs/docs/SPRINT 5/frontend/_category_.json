@@ -1,0 +1,8 @@
+{
+    "label": "Frontend",
+    "position": 4,
+    "link": {
+      "type": "generated-index",
+      "description": "Este documento descreve as interfaces de um sistema robótico, incluindo telas para dispositivos web e integradas ao robô. A interface web possui uma tela inicial ilustrativa, uma Home com funcionalidades principais e navegação, uma tela para requisições, outra para busca de peças por ID SAP, uma tela de histórico de pesquisas, e uma para informações de perfil do usuário. No contexto do robô, a interface inclui uma tela inicial, instruções de uso do chatbot e a prototipação da interface do chatbot. "
+    }
+  }
