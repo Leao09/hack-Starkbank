@@ -34,14 +34,6 @@ class ClientSocket:
 
 
     def callback(self, msg: Any) -> None:
-        print(msg)
-        # pattern = re.compile(r'\[x:(?P<x>-?\d+), y:(?P<y>-?\d+)\]')
-        # match = pattern.search(msg)
-
-        # if match:
-        #     x = int(match.group("x"))
-        #     y = int(match.group("y"))
-        #     resultado = [x, y]
         self.publish_points.timer_callback(str(msg))
 
 
