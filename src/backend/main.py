@@ -16,6 +16,7 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
+<<<<<<< HEAD:src/backend/main.py
 
 # Local Imports
 from db import database
@@ -25,6 +26,16 @@ from routes.warehouse import app as warehouse_router
 
 # Pydantic BaseModel Import
 from pydantic import BaseModel
+=======
+from fastapi.responses import FileResponse
+from gtts import gTTS
+from dotenv import load_dotenv
+import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
+import uuid
+import os
+import re
+>>>>>>> ec7d20f (feat: audio in each message):src/backend/app/main.py
 
 load_dotenv()
 
@@ -115,9 +126,26 @@ def receber_dados(data: DataModel):
 async def text_to_speech(text: str = Body(...), lang: str = Body(default="pt-br")):
     try:
         tts = gTTS(text=text, lang=lang)
+<<<<<<< HEAD:src/backend/main.py
         file_path = "../frontend/public/speech.mp3"
+=======
+        unique_file_name = f"speech_{uuid.uuid4()}.mp3"  # Gerar um nome de arquivo único
+        file_path = f"../../frontend/public/{unique_file_name}"
+>>>>>>> ec7d20f (feat: audio in each message):src/backend/app/main.py
         tts.save(file_path)
-        return FileResponse(file_path, media_type='audio/mp3', filename=file_path)
+        return {"audioUrl": f"/{unique_file_name}"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+@app.delete("/delete_audios")
+async def delete_audios():
+    try:
+        directory = '../../frontend/public/'
+        files = os.listdir(directory)
+        for file in files:
+            if file.startswith("speech_") and file.endswith(".mp3"):
+                os.remove(os.path.join(directory, file))
+        return {"message": "Áudios excluídos com sucesso"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
