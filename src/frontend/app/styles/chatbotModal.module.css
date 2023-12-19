@@ -152,3 +152,16 @@
 .volumeIcon{
     margin-left: auto;
 }
+
+.audioButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px; /* Ajuste conforme necessário */
+  }
+  
+  .audioIcon {
+    width: 20px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+  }

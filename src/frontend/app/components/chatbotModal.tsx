@@ -14,6 +14,7 @@ declare global {
 
 interface Message {
   message: string;
+  audioUrl?: string;
   sender: 'user' | 'bot';
 }
 
@@ -27,16 +28,6 @@ interface ModalProps {
   const [isRecording, setIsRecording] = useState(false);
   const [messageHistory, setMessageHistory] = useState<Message[]>([]);
   const recognitionRef = useRef<any>(null);
-  const [audioUrl, setAudioUrl] = useState('/speech.mp3');
-
-  const refreshAudio = () => {
-    const newAudioUrl = `/speech.mp3?timestamp=${new Date().getTime()}`;
-    setAudioUrl(newAudioUrl);
-  };
-
-  useEffect(() => {
-    refreshAudio();
-  }, []);
 
   useEffect(() => {
     const messagesContainer = document.querySelector("." + styles.messagesContainer);
@@ -46,12 +37,20 @@ interface ModalProps {
   }, [messageHistory]);
   
   const onCloseButton = () => {
-   console.log("Botão clicado");
+   deleteAudios();
    onClose();
   };
 
-  const addToMessageHistory = (message: string, sender: 'user' | 'bot') => {
-    setMessageHistory(prevHistory => [...prevHistory, { message, sender }]);
+  const addToMessageHistory = (message: string, sender: 'user' | 'bot', audioUrl?: string) => {
+    setMessageHistory(prevHistory => [...prevHistory, { message, sender, audioUrl }]);
+  };
+
+  const deleteAudios = async () => {
+    try {
+      await axios.delete('http://localhost:8000/delete_audios');
+    } catch (error) {
+      console.error('Erro ao excluir áudios:', error);
+    }
   };
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -67,7 +66,13 @@ interface ModalProps {
         try {
           const response = await axios.post('http://localhost:8000/tts/', { text: responseChatbot.data });
           if (response.data) {
-            refreshAudio();
+            setMessageHistory(prevHistory => {
+              const newHistory = [...prevHistory];
+              const lastBotMessageIndex = newHistory.length - 1;
+              newHistory[lastBotMessageIndex] = { ...newHistory[lastBotMessageIndex], audioUrl: response.data.audioUrl };
+              console.log("Nova URL de áudio:", response.data.audioUrl);
+              return newHistory;
+            });
           }
         } catch (error) {
           console.error('Erro ao enviar texto para TTS:', error);
@@ -141,9 +146,6 @@ interface ModalProps {
           <div className={styles.instructionsContainer}>
             <div className={styles.teste}>
               <p className={styles.textoInserido}></p>
-              <button type="button" className={styles.volumeIcon}>
-                <audio controls src={audioUrl} />
-              </button>
             </div>
 
             <div className={styles.messagesContainer}>
@@ -153,8 +155,12 @@ interface ModalProps {
                   className={`${styles.message} ${msg.sender === 'user' ? styles.userMessage : styles.botMessage}`}
                 >
                   {msg.message}
-                </div>
-                
+                  {msg.sender === 'bot' && msg.audioUrl && (
+                    <button className={styles.audioButton} onClick={() => new Audio(msg.audioUrl).play()}>
+                      <img src="/speaker.png" alt="Play Audio" className={styles.audioIcon} />
+                    </button>
+                  )}
+                </div>             
               ))}
             </div>
 
