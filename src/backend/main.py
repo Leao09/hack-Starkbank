@@ -1,14 +1,11 @@
-# Standard Library Imports
-import os
-import re
+from fastapi import FastAPI
+from db import database
 
-# Third-party Library Imports
+from routes.user import app as user_router
+from routes.historic import app as historic_router
+from routes.warehouse import app as warehouse_router
 from fastapi import FastAPI, Request, Body, HTTPException
-from fastapi.responses import FileResponse
-from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv
-import uvicorn
-from gtts import gTTS
+from pydantic import BaseModel
 import socketio
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
@@ -16,15 +13,13 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
-
-# Local Imports
-from db import database
-from routes.user import app as user_router
-from routes.historic import app as historic_router
-from routes.warehouse import app as warehouse_router
-
-# Pydantic BaseModel Import
-from pydantic import BaseModel
+from fastapi.responses import FileResponse
+from gtts import gTTS
+from dotenv import load_dotenv
+import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
+import os
+import re
 
 load_dotenv()
 
@@ -70,7 +65,7 @@ async def shutdown():
 
 def connect_gpt(data: str):
 
-    reader = PdfReader('./data/inventario_simulado.pdf')
+    reader = PdfReader('../data/inventario_simulado.pdf')
     
     if reader is not None:
         raw_text = ''
@@ -114,8 +109,7 @@ def receber_dados(data: DataModel):
 async def text_to_speech(text: str = Body(...), lang: str = Body(default="pt-br")):
     try:
         tts = gTTS(text=text, lang=lang)
-        unique_file_name = f"speech_{uuid.uuid4()}.mp3"  # Gerar um nome de arquivo único
-        file_path = f"../frontend/public/{unique_file_name}"
+        file_path = "../../frontend/public/speech.mp3"
         tts.save(file_path)
         return FileResponse(file_path, media_type='audio/mp3', filename=file_path)
     except Exception as e:
