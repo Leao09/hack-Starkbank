@@ -66,7 +66,7 @@ async def shutdown():
 
 def connect_gpt(data: str):
 
-    reader = PdfReader('../data/inventario_simulado.pdf')
+    reader = PdfReader('./data/inventario_simulado.pdf')
     
     if reader is not None:
         raw_text = ''
@@ -111,7 +111,7 @@ async def text_to_speech(text: str = Body(...), lang: str = Body(default="pt-br"
     try:
         tts = gTTS(text=text, lang=lang)
         unique_file_name = f"speech_{uuid.uuid4()}.mp3"  # Gerar um nome de arquivo único
-        file_path = f"../../frontend/public/{unique_file_name}"
+        file_path = f"../frontend/public/{unique_file_name}"
         tts.save(file_path)
         return {"audioUrl": f"/{unique_file_name}"}
     except Exception as e:
@@ -120,7 +120,7 @@ async def text_to_speech(text: str = Body(...), lang: str = Body(default="pt-br"
 @app.delete("/delete_audios")
 async def delete_audios():
     try:
-        directory = '../../frontend/public/'
+        directory = '../frontend/public/'
         files = os.listdir(directory)
         for file in files:
             if file.startswith("speech_") and file.endswith(".mp3"):
