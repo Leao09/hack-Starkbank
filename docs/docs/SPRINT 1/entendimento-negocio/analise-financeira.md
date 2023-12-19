@@ -22,7 +22,10 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
     <tr>
       <td>Estagiário</td>
       <td>1</td>
-      <td>O estagiário desempenha um papel crucial no desenvolvimento e implementação do projeto, trazendo perspectivas novas e habilidades atualizadas.</td>
+      <td>
+        O estagiário desempenha um papel crucial no desenvolvimento e implementação do projeto, trazendo perspectivas
+        novas e habilidades atualizadas.
+      </td>
       <td>R$ 2,000.00</td>
       <td>4,444.44</td>
       <td>6</td>
@@ -31,7 +34,10 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
     <tr>
       <td>UX Design/Research</td>
       <td>1</td>
-      <td>Desenvolve produtos e serviços digitais que satisfazem as necessidades, desejos e expectativas dos usuários, de forma eficiente e atrativa.</td>
+      <td>
+        Desenvolve produtos e serviços digitais que satisfazem as necessidades, desejos e expectativas dos usuários, de
+        forma eficiente e atrativa.
+      </td>
       <td>R$ 6,800.00</td>
       <td>11,271.11</td>
       <td>2</td>
@@ -83,8 +89,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
       <td>24998</td>
     </tr>
     <tr>
-      <td rowspan="5">Serviços da AWS</td>
-      <td>Amazon S3</td>
+      <td>Serviços da AWS - Amazon S3</td>
       <td>USD 50</td>
       <td>R$ 249.99</td>
       <td>-</td>
@@ -92,7 +97,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
       <td>2999.88</td>
     </tr>
     <tr>
-      <td>Amazon EC2</td>
+      <td>Serviços da AWS - Amazon EC2</td>
       <td>USD 2000</td>
       <td>R$ 9,999.80</td>
       <td>-</td>
@@ -100,7 +105,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
       <td>119997.6</td>
     </tr>
     <tr>
-      <td>Amazon RDS</td>
+      <td>Serviços da AWS - Amazon RDS</td>
       <td>USD 200</td>
       <td>R$ 999.80</td>
       <td>-</td>
@@ -108,7 +113,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
       <td>11997.6</td>
     </tr>
     <tr>
-      <td>AWS Lambda</td>
+      <td>Serviços da AWS - AWS Lambda</td>
       <td>USD 50</td>
       <td>R$ 249.99</td>
       <td>-</td>
@@ -116,7 +121,7 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
       <td>2999.88</td>
     </tr>
     <tr>
-      <td>Amazon CloudWatch</td>
+      <td>Serviços da AWS - Amazon CloudWatch</td>
       <td>USD 100</td>
       <td>R$ 499.90</td>
       <td>-</td>
@@ -132,11 +137,21 @@ A tabela abaixo ilustra as estimativas de despesas anuais e custos associados ao
       <td>12</td>
       <td>1199.76</td>
     </tr>
-</tbody>
-<tr>  <td colspan="3">Somatório</td>  <td>R$ 72,797.46</td>  <td>-</td>  <td>-</td>  <td>R$ 632,400.46</td>  
-</tr>
-<tr>  <td colspan="3">Somatório incluindo impostos por dentro</td>  <td>R$ 81,533.15</td>  <td>-</td>  <td>-</td>  <td>R$ 708,288.51</td>  
-</tr>   
+  </tbody>
+  <tr>
+    <td colspan="3">Somatório</td>
+    <td>R\$ 72,797.46</td>
+    <td>-</td>
+    <td>-</td>
+    <td>R$ 632,400.46</td>
+  </tr>
+  <tr>
+    <td colspan="3">Somatório incluindo impostos por dentro</td>
+    <td>R\$ 81,533.15</td>
+    <td>-</td>
+    <td>-</td>
+    <td>R$ 708,288.51</td>
+  </tr>
 </table>
 
 Os custos com os funcionários CLT são baseados em pesquisas de mercado dos sites [Catho](https://paraempresas.catho.com.br/quanto-custa-um-funcionario-para-empresa/) e [iDinheiro](https://www.idinheiro.com.br/). Além dos salários base, foram inclusos benefícios como plano de saúde de R$ 600, Vale Transporte de R$ 400 e VR de R$ 600.
