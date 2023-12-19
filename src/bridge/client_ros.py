@@ -46,7 +46,8 @@ class ClientSocket:
 
 
 if __name__ == "__main__":
-
+    
+    print("Client iniciado...")
     socket_instance = ClientSocket(sio, '/enqueue')
 
     while True:
