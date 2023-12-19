@@ -14,3 +14,7 @@
 
 ### Banco de dados
 - Para o armazenamento dos dados da aplicação esta sendo utilizado um rds em postgres.
+
+## Diagrama do fluxo de desenvolvimento do bakcend
+
+<img src={require('/img/Diagrama.jpg').default} width='100%'/>
