@@ -16,6 +16,7 @@ class ControlTurltebot(Node):
         self.initial_pose = self.create_initial_pose()
         self.nav.setInitialPose(self.initial_pose)
         self.nav.waitUntilNav2Active()
+        self.waypoints = []
 
         self.subscription = self.create_subscription(
             String,
@@ -54,8 +55,17 @@ class ControlTurltebot(Node):
     def listener_callback(self, msg):
         self.get_logger().info('I heard: "%s"' % msg.data)
         self.points = eval(msg.data)
-        print(self.points)
-        self.nav.followWaypoints([self.create_pose_stamped(self.nav, float(self.points[0]), float(self.points[1]), 0.0)])
+
+        self.point = self.create_pose_stamped(self.nav, float(self.points[0]), float(self.points[1]), 0.0)
+        self.waypoints.append(self.point)
+
+        while len(self.waypoints) > 0:
+            if self.nav.isTaskComplete():
+                self.nav.followWaypoints(self.waypoints)
+                self.waypoints.pop(0)
+            else: 
+                pass
+                    
 
 
 def main(args=None):
