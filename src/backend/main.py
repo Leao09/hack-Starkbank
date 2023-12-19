@@ -115,7 +115,7 @@ def receber_dados(data: DataModel):
 async def text_to_speech(text: str = Body(...), lang: str = Body(default="pt-br")):
     try:
         tts = gTTS(text=text, lang=lang)
-        file_path = "../../frontend/public/speech.mp3"
+        file_path = "../frontend/public/speech.mp3"
         tts.save(file_path)
         return FileResponse(file_path, media_type='audio/mp3', filename=file_path)
     except Exception as e:
