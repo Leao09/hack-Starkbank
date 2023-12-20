@@ -51,7 +51,8 @@ Devido a utilização da api para um modelo treinado por uma compania a realiza�
 
 - Fluxo de Resposta de Áudio: O texto gerado pelo chatbot é enviado ao servidor Flask que utilizando a API da OpenAI, gera a resposta em áudio e a retorna para a interface do usuário.
 
-<img src="https://raw.githubusercontent.com/2023M8T2-Inteli/grupo5/main/media/images/arquitetura_chat_bot.png" alt="Arquitetura Chat Bot" width="100%" />
+<img src="https://raw.githubusercontent.com/2023M8T2-Inteli/grupo5/main/media/images/arquiteura_chainlit.png
+" alt="Arquitetura Chat Bot" width="100%" />
 
 
 
