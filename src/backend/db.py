@@ -44,5 +44,14 @@ class Warehouse(ormar.Model):
     Status: bool = ormar.Boolean(nullable=False)
     Amout: int = ormar.Integer(nullable=False)
 
+class Robot(ormar.Model):
+    class Meta(BaseMeta):
+        tablename = "robot"
+        
+    id: int = ormar.Integer(primary_key=True)
+    X: str = ormar.String(max_length=128,nullable=False)
+    Y: str = ormar.String(max_length=128,nullable=False)
+    
+
 engine = sqlalchemy.create_engine(settings.db_url)
 metadata.create_all(engine)
