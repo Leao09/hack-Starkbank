@@ -55,7 +55,7 @@ Utilize os botões correspondentes para acessar as diferentes funcionalidades da
 
 Então, estamos na página principal, a página **HOME**. Vamos começar com as rotas que estão localizado na parte azul superior da tela, a Navbar. Onde tem "HOME", "HISTÓRICO" e "PERFIL".
 
-![](doc/../../../../static/img/Telahome2.png)
+<img src="https://raw.githubusercontent.com/2023M8T2-Inteli/grupo5/main/docs/static/img/Telahome.png" alt="Telahome2" width="100%" />
 
 Como já está na "HOME". Vamos para "HISTÓRICO".
 
@@ -148,4 +148,4 @@ E, por fim, a navegação e a usabilidade que é de fácil acesso, pois o chatbo
 
 `*NOTA: veja o vídeo embaixo para uma melhor compreensão da navegabilidade da interface até a conexão com o robô.*`
 
-[![vídeo](doc/../../../../static/img/Telahome.png)](https://www.youtube.com/watch?v=6A9NSQRbdrI)
+[<img src="https://raw.githubusercontent.com/2023M8T2-Inteli/grupo5/main/docs/static/img/Telahome.png" alt="Telahome2" width="100%" />](https://www.youtube.com/watch?v=6A9NSQRbdrI)
