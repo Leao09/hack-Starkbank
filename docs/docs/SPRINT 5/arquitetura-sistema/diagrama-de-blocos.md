@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 O diagrama de blocos é uma representação gráfica que esclarece as partes de um sistema, demonstrando como os vários elementos que constituem a solução se interconectam.
 
-<img src={require('/img/Arquitetura.png').default} width='100%'/>
+<img src={require('/img/RoadMap.jpg').default} width='100%'/>
 
 ### Descrição dos elementos da arquitetura
 
