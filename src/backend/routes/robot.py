@@ -19,9 +19,6 @@ from model import RobotSchema
 
 SERVER_URL = "http://localhost:5000"
 
-# Descomentar a linha abaixo e comentar a acima caso esteja usando o docker-compose
-# SERVER_URL = "http://websocket:5000"
-
 sio = socketio.Client()
 sio.connect(SERVER_URL)
 
