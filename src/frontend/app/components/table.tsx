@@ -1,17 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import styles from '../styles/Table.module.css';
 
-const Table = () => {
-    const [tableData, setTableData] = useState([]);
+const Table = ({ data }) => {
     const [selectedRow, setSelectedRow] = useState<number | null>(null);
-
-    useEffect(() => {
-        // Ao montar o componente, fazer a requisição GET para obter dados da tabela
-        axios.get('http://127.0.0.1:8000/historic')
-            .then(response => setTableData(response.data))
-            .catch(error => console.error('Erro ao obter dados da tabela:', error));
-    }, []);
 
     return (
         <table className={styles.tabela}>
@@ -25,7 +16,7 @@ const Table = () => {
                 </tr>
             </thead>
             <tbody>
-                {tableData.map((item, index) => (
+                {data.map((item, index) => (
                     <tr
                         key={index}
                         className={selectedRow === index ? styles.selectedRow : ""}

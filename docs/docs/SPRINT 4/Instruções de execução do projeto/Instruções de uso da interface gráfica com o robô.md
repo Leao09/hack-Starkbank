@@ -36,7 +36,7 @@ python3 main.py
 
 **OBS: Não esquersa de colocar sua chave OPEN AI no arquivo .env!**
 
-## Navegando na interface.
+## Navegando na interface
 
 Ao acessar a interface no navegador, você encontrará uma página inicial com um esquema de cores azul e branco, apresentando um botão **"INICIAR"**. Com isso, entrará na página **HOME**.
 
@@ -59,7 +59,7 @@ Então, estamos na página principal, a página **HOME**. Vamos começar com as 
 
 Como já está na "HOME". Vamos para "HISTÓRICO".
 
-## Navegação na Tela de Histórico.
+## Navegação na Tela de Histórico
 
 Depois de navegar pela interface inicial e passar pela HOME, chegamos à tela de HISTÓRICO. Esta seção é acessível através da barra de navegação superior, clicando no botão "Histórico".
 
@@ -79,7 +79,7 @@ Essas funcionalidades interativas permitem que tenha
   
 - **Detalhamento**: Ao selecionar uma linha, pode-se ter acesso a mais detalhes sobre aquela requisição específica.
 
-## Navegação na Tela de Perfil.
+## Navegação na Tela de Perfil
 
 A tela de PERFIL é acessível a partir da barra de navegação superior do sistema, selecionando a opção "Perfil".
 
@@ -101,7 +101,7 @@ Ilustrações e ícones são usados para criar uma experiência de usuário amig
 - **Segurança**:
 A tela de perfil é projetada com a segurança do usuário em mente, fornecendo a opção de visualizar a senha digitada para evitar erros antes de salvar as alterações.
 
-## Navegação na Funcionalidade de Nova Requisição.
+## Navegação na Funcionalidade de Nova Requisição
 
 Agora, vamos voltar para a página "Home", a fim  de que possa ter duas instruções a serem passadas: "Novas Requisições" e "Busca de Peças". Na primeira instrução, "Novas Requisições", é parte que permite os usuários solicitem novos itens ou serviços,  ou seja, o usuário é apresentado a um formulário destinado ao pedido de novos itens. Este formulário é essencial para o gerenciamento de inventário e solicitações dentro do sistema.
 
@@ -118,7 +118,7 @@ Existem dois botões de ações, o "enviar" e "cancelar":
 - **Enviar**: Após preencher os campos necessários, o usuário pode submeter a requisição clicando neste botão azul.
 - **Cancelar**: Se o usuário decidir não prosseguir com a requisição, ele pode cancelar a operação clicando neste botão vermelho.
 
-## Navegação na Funcionalidade de Busca de Peças.
+## Navegação na Funcionalidade de Busca de Peças
 
 Agora, volte novamente a pagina "Home", e clique na opção "Busca de Peças", a qual é projetada para permitir que os usuários pesquisem itens específicos no almoxarifado. Vale lembrar que esta tela é crucial para verificar a disponibilidade de itens e gerenciar o estoque eficientemente.
 
@@ -131,7 +131,7 @@ Sem contar que esse botão de busca de peça tem funcionalidades Interativas, co
 - **Pesquisa**: No topo da tela há uma barra de pesquisa, permitindo aos usuários encontrar rapidamente um item específico dentro do inventário.
 - **Atualizações**: O sistema pode oferecer atualizações em tempo real do status e quantidade dos itens, dependendo da configuração do almoxarifado e da frequência das atualizações de estoque.
 
-## Uso do Chatbot.
+## Uso do Chatbot
 
 O chatbot é acessado por meio do ícone do robô localizado no canto inferior direito em todas as páginas do sistema NaviGuide. Ao clicar neste ícone, um modal se abre para interação. Ele serve como um assistente virtual para ajudar os usuários com suas consultas e operações dentro do sistema, como conversar com o robô físico por exemplo, através de solicitações.
 
@@ -144,7 +144,7 @@ Além do mais, dentro do modal tem alguns botões de ações. Estes são:
 - **Microfone**: Para usar o recurso STT, o usuário pode clicar no ícone do microfone para começar a falar.
 - **Enviar**: Após digitar uma mensagem ou falar, o usuário pode enviar a consulta clicando no ícone de envio.
 
-E, por fim, a navegação e a usabilidade que é de fácil acesso, pois o chatbot pode ser acessado a qualquer momento, oferecendo suporte contínuo ao usuário. sem contar que tem respostas instantâneas, visto que o sistema de chatbot é projetado para fornecer respostas instantâneas e relevantes, facilitando a experiência do usuário.
+E, por fim, a navegação e a usabilidade que é de fácil acesso, pois o chatbot pode ser acessado a qualquer momento, oferecendo suporte contínuo ao usuário. Sem contar que têm respostas instantâneas, visto que o sistema de chatbot é projetado para fornecer respostas instantâneas e relevantes, facilitando a experiência do usuário.
 
 `*NOTA: veja o vídeo embaixo para uma melhor compreensão da navegabilidade da interface até a conexão com o robô.*`
 
