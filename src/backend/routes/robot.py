@@ -89,3 +89,11 @@ class DataModel(BaseModel):
 async def receber_dados(data: DataModel):
     resposta = await connect_gpt(data.dados)
     return resposta
+
+
+@app.get("/robo")
+async def read_records_location():
+    if not database.is_connected:
+        await database.connect()
+
+    return await Robot.objects.all()
