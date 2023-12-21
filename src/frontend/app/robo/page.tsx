@@ -1,13 +1,9 @@
 'use client';
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import React, { useState } from "react";
 import Navbar from "../components/navbar";
-import User from "../components/user";
 import Icon from "../components/icon";
-import Search from "../components/search";
 import TableRobo from "../components/tableRobo";
 import styles from "../styles/Navigate.module.css";
-import Image from "next/image";
 import "../globals.css";
 import ChatbotModal from "../components/chatbotModal";
 
