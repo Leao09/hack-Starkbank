@@ -1,0 +1,8 @@
+{
+    "label": "Demonstração final do sistema integrado",
+    "position": 10,
+    "link": {
+      "type": "generated-index",
+      "description": "Nessa seção é apresentada a integração completa entre a interface do usuário, o chatbot e o robô. Esta demonstração visa mostrar o funcionamento  do sistema como um todo, ilustrando o resultado das fases de desenvolvimento anteriores e as possíveis direções para futuras implementações na solução."
+    }
+}
