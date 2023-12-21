@@ -15,6 +15,9 @@
 ### Banco de dados
 - Para o armazenamento dos dados da aplicação esta sendo utilizado um rds em postgres.
 
+## PyJWT
+- Realizar a criação do login, foi utilizado o JWT que cria web tokens e protege as rotas que serão utilizadas para só serem acessadas por um usuário autenticado. Para a implementação dessa features foi utilizado dois arquivos o jwt_beare.py e o jwt_handler.py. O jwt_handler faz a criação da autenticação e decodificação do token para um usuário atenticadao e o jwt_beare faz a verificação se aquele usuário possui o token e está autenticado.
+
 ## Diagrama do fluxo de desenvolvimento do bakcend
 
 <img src={require('/img/Diagrama.jpg').default} width='100%'/>

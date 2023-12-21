@@ -3,9 +3,11 @@ Para a interface foi pensado tanto em telas para a utilização em um dispositiv
 
 ## Organizações das telas Web
 ### Tela inicial 
-- Esta tela é utilizada para o login, mas ela é uma tela bem ilustrativa como capa do sistema. 
+- Esta tela apresenta tanto a tela de login quanto a de cadastro, nesta tela é possivel realizar o  cadastro de um novo usuário, e logar com a conta criada apenas clicando nos botões laterais de intrução
 
-<img src={require('/img/Telahome.png').default} width='100%'/>
+<img src={require('/img/Telalogin.png').default} width='100%'/>
+
+<img src={require('/img/TelaCadastro.png').default} width='100%'/>
 
 ### Home 
 - A página de home foi projetada para conter as principais utilidades do sistema com a busca por peças ou a requisição de uma nova peça. Além disso, ela possui uma barra de navegação para levar para as outras páginas e funcionalidades do sistema. Por fim, no canto inferior direito está o botão para utilizar o chat-bot. Este botão irá permitir a interação do usuário com o chat em todas as demais páginas a fim de fazer perguntas sobre determinados temas, após sair desta página a sessão de interação com o chat será encerrada.
@@ -18,7 +20,7 @@ Para a interface foi pensado tanto em telas para a utilização em um dispositiv
 <img src={require('/img/Telarequisicao.png').default} width='100%'/>
 
 ### Tela de busca de peças
-- Está tela será utilizado para consultar e procurar pelas peças disponiveis no almoxarifado utilizamdo o seu ID SAP, apresentando os resultados em forma de tabela. A tabela apresenta 4 colunas principais sendo elas: Nome, ID, Status estoque e a quantidade de unidades da peça.  
+- Está tela será utilizado para consultar e procurar pelas peças disponiveis no almoxarifado utilizamdo o seu ID SAP, apresentando os resultados em forma de tabela. A tabela apresenta 4 colunas principais sendo elas: Nome, ID, Status estoque e a quantidade de unidades da peça.Sendo possivel realizar um filtro por digitação no campo de busca.  
 
 <img src={require('/img/Telaalmoxarifado.png').default} width='100%'/>
 
