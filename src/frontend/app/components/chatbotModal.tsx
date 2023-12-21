@@ -161,10 +161,10 @@ interface ModalProps {
                 >
                   {msg.message}
                   {msg.sender === 'bot' && msg.audioUrl && (
-                    <button className={styles.audioButton} onClick={() => new Audio(msg.audioUrl).play()}>
-                      <img src="/speaker.png" alt="Play Audio" className={styles.audioIcon} />
-                    </button>
-                  )}
+                  <audio controls src={msg.audioUrl}>
+                    Seu navegador não suporta a tag de áudio.
+                  </audio>
+                )}
                 </div>             
               ))}
             </div>
