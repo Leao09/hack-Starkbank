@@ -33,34 +33,26 @@ Este projeto tem como objetivo principal simplificar a gestão do almoxarifado d
 
 Este projeto busca otimizar a eficiência operacional da Cervejaria Ambev, demonstrando nosso compromisso com a excelência no atendimento ao cliente e a adoção de tecnologias inovadoras para aprimorar a gestão do almoxarifado.
 
-## 📁 Estrutura de pastas
+## 📁 Estrutura de Pastas
 
-Dentre os arquivos presentes na raiz do projeto, definem-se:
+Este repositório contém vários diretórios e arquivos importantes. Aqui está um resumo de cada um deles:
 
-- <b>readme.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+- `README.md`: Este arquivo serve como um guia e explicação geral sobre o projeto. É o documento que você está lendo agora.
 
-- <b>docs</b>: aqui estarão todos os documentos do projeto [/docs](/docs). Há também uma pasta denominada <b>outros</b> onde estão presentes documentos complementares.
+- `docs`: Diretório que contém todos os documentos relacionados ao projeto. Para acessar clique [aqui](https://2023m8t2-inteli.github.io/grupo5/)
 
-- <b>media</b>: pasta para armazenar imagens e vídeos do projeto.
+- `media`: Pasta destinada ao armazenamento de mídias relacionadas ao projeto, como imagens e vídeos. Dentro dela, você encontrará:
+  - `images`: Subpasta para armazenar imagens específicas, como a arquitetura dos chatbots.
 
+- `src`: Pasta que contém o código-fonte do projeto. Aqui você encontrará todos os scripts e arquivos de código necessários para executar e entender o funcionamento do projeto.
 
-## 💻 Execução do projeto
+- `.gitignore`: Arquivo utilizado para especificar quais arquivos ou diretórios o Git deve ignorar.
 
-- Em construção
+- `arquivos`: Pasta que inclui arquivos diversos relacionados ao projeto, como recursos adicionais, templates ou exemplos.
 
-## 🗃 Histórico de lançamentos
-
-**1.0 — 16/10/2023 (Sprint I)**
-
-* Entendimento do negócio
-
-* Entendimento da experiência do usuário
-
-* Análise de impacto ético
-
-* Arquitetura do sistema
+A estrutura acima é projetada para manter o projeto organizado e fácil de navegar, tanto para desenvolvedores quanto para usuários.
 
 
 ## 📋 Licença/License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"> This project is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/2023M8T2-Inteli/grupo5">Inteli, Alysson Cordeiro, Felipe Leão, Gustavo Pereira, Luca Giberti, Emanuele Morais, Patricia Honorato, Vitor Zeferino.</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>. <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"></p>
