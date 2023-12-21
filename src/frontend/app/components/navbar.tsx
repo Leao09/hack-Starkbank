@@ -15,6 +15,9 @@ const Navbar = () => {
         <Link href="/history" className={styles.navItem}>
           Histórico
         </Link>
+        <Link href="/robo" className={styles.navItem}>
+          Robo
+        </Link>
         <Link href="/profile" className={styles.navItem}>
           Perfil
         </Link>
