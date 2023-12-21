@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from '../styles/chatbotModal.module.css';
 import axios from 'axios';
 import '../globals.css';
+import Spinner from './Spinner'
 
 
 declare global {
@@ -25,6 +26,7 @@ interface ModalProps {
  const ChatbotModal: React.FC<ModalProps> = ({ onClose }) => {
 
   const [inputText, setInputText] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
   const [messageHistory, setMessageHistory] = useState<Message[]>([]);
   const recognitionRef = useRef<any>(null);
@@ -59,6 +61,8 @@ interface ModalProps {
 
   const handleSendClick = async () => {
     if (inputText) {
+      setInputText('');
+      setIsLoading(true);
       addToMessageHistory(inputText, 'user');
       try {
         const responseChatbot = await axios.post('http://localhost:8000/enviar_dados', { dados: inputText });
@@ -76,12 +80,13 @@ interface ModalProps {
           }
         } catch (error) {
           console.error('Erro ao enviar texto para TTS:', error);
+        } finally {
+          setIsLoading(false);
         }
       } catch (error) {
         console.error('Erro ao enviar texto para o chatbot:', error);
       }
     }
-    setInputText('');
   };
 
   const handleKeyPress = (event: KeyboardEvent) => {
@@ -156,16 +161,18 @@ interface ModalProps {
                 >
                   {msg.message}
                   {msg.sender === 'bot' && msg.audioUrl && (
-                    <button className={styles.audioButton} onClick={() => new Audio(msg.audioUrl).play()}>
-                      <img src="/speaker.png" alt="Play Audio" className={styles.audioIcon} />
-                    </button>
-                  )}
+                  <audio controls src={msg.audioUrl}>
+                    Seu navegador não suporta a tag de áudio.
+                  </audio>
+                )}
                 </div>             
               ))}
             </div>
 
+            {isLoading && <Spinner />}
+
             <div className={styles.inputWithIcon}>
-              <input type="text" placeholder="Digite algo..." className={styles.input} value={inputText} onChange={handleInputChange} onKeyDown={handleKeyPress}/>
+              <input type="text" placeholder="Digite algo..." className={styles.input} value={inputText} onChange={handleInputChange} onKeyDown={handleKeyPress} disabled={isLoading}/>
               <button className={styles.sendIcon} onClick={handleSendClick}>
                   <img src="/send.png" alt="send"/> 
               </button>

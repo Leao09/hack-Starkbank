@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import styles from '../styles/Table.module.css';
 
-const Table = ({ data }) => {
+const Table = () => {
+    const [tableData, setTableData] = useState([]);
     const [selectedRow, setSelectedRow] = useState<number | null>(null);
+
+    useEffect(() => {
+        // Ao montar o componente, fazer a requisição GET para obter dados da tabela
+        const token = window.localStorage.getItem("token");
+        axios.get('http://127.0.0.1:8000/historic',{
+            headers: { Authorization: `Bearer ${token}`,},
+            
+          })
+            .then(response => setTableData(response.data))
+            .catch(error => console.error('Erro ao obter dados da tabela:', error));
+    }, []);
 
     return (
         <table className={styles.tabela}>
@@ -16,7 +29,7 @@ const Table = ({ data }) => {
                 </tr>
             </thead>
             <tbody>
-                {data.map((item, index) => (
+                {tableData.map((item, index) => (
                     <tr
                         key={index}
                         className={selectedRow === index ? styles.selectedRow : ""}

@@ -4,13 +4,14 @@ Antes de tudo, certfique-se de ter o Node.js e o npm instalado na sua máquina. 
 
 Para executar a Interface gráfica, abra o terminal ou seu prompt de comando. Vamos pracisar de 3 (três) terminais rodando, um para interface outro para o backend e outro para para conexão com robô. Dessa maneira, navegue até o diretório do front-end utilizando no primeiro terminal o seguinte comando:
 
-```python
+```
 cd grupo5/src/frontend
 ```
 
-Em seguinda, para inciar o servidor local,  execute o seguinte comando:
+Em seguinda, para inciar o servidor local,  execute os seguintes comando:
 
-```python
+```
+npm i
 npm run dev
 ```
 Após a execução bem-sucedida, acesse o navegador e vá para o enderenço:
@@ -19,22 +20,43 @@ Após a execução bem-sucedida, acesse o navegador e vá para o enderenço:
 http://localhost:3000
 ```
 
-No segundo terminal, execute:
+Em um segundo terminal, execute em sequência:
 
 ```python
 cd src/bridge
+python3 -m venv venv
+pip install -r requirements.txt
 python3 socket_server.py
 ```
 
-Já no terceiro, execute:
+Em um novo terminal rode em sequência:
+```python
+cd src/bridge
+sourde venv/bin/activate
+python3 client_ros.py
+```
+
+Abra mais um terminal e execute:
 
 ```python
-cd src/backend/app
-
+cd src/backend
+python3 -m venv venv
+pip install -r requirements.txt
 python3 main.py
 ```
 
-**OBS: Não esquersa de colocar sua chave OPEN AI no arquivo .env!**
+Por fim, em um último terminal rode em sequência:
+```python
+cd src/ros
+python3 -m venv venv
+pip install -r requirements.txt
+python3 main.py
+```
+
+
+**OBS: É necessário criar um arquivo .env e adicionar uma chave de API do ChatGPT, para isso crie um aquivo chamo ".env" dentro do diretorio backend e adicione a chave no modelo OPENAI_API_KEY=sua-chave-de-api-aqui**
+
+**OBS2: Lembre-se que para que o robô consiga se comunicar com sucesso é necessário que a máquina esteja no mesmo ROS_DOMAIN_ID e rede wifi que o robô.**
 
 ## Navegando na interface.
 
