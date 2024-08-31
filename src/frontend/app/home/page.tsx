@@ -30,25 +30,6 @@ export default function Home() {
   const handleCloseChatbotModal = () => {
     setIsChatbotModalOpen(false);
   };
-  useEffect(() => {
-    // Função para validar o token
-    const validateToken = () => {
-      // Recupera o token do localStorage
-      const token = window.localStorage.getItem('token');
-      if (token == "undefined") {
-        return false;
-      }
-      // Retorna true se o token existir
-      return true
-    };
-
-    // Verifica se o token existe ao renderizar a página
-    if (validateToken()==false) {
-      // Redireciona para a página href="/"
-      window.location.href = '/';
-      alert("Login inválido")
-    }
-  }, []);
     return (
       <>
         <Navbar />

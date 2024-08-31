@@ -9,32 +9,13 @@ from langchain.llms import OpenAI
 from fastapi.responses import FileResponse
 from gtts import gTTS
 from dotenv import load_dotenv
-import re
-import socketio
 
-
-from db import database, Robot
 from fastapi import APIRouter
-from model import RobotSchema
-
-SERVER_URL = "http://localhost:5000"
-
-sio = socketio.Client()
-sio.connect(SERVER_URL)
 
 
 load_dotenv()
 
 app = APIRouter()
-
-# Função auxiliar para salvar localizações que o robô passou
-async def records_location(data: RobotSchema):
-
-    if not database.is_connected:
-        await database.connect()
-
-    await Robot.objects.create(X=data.X,
-                              Y=data.Y)
 
 # Função auxiliar para comunicar com API do ChatGPT
 async def connect_gpt(data: str):
@@ -64,18 +45,7 @@ async def connect_gpt(data: str):
         docs = knowledge_base.similarity_search(query)
         response = chain.run(input_documents=docs, question=query)
 
-    pattern = re.compile(r'\[x\s*:\s*(?P<x>-?\d*(?:\.\d+)?),\s*y\s*:\s*(?P<y>-?\d*(?:\.\d+)?)\]')
-    match = pattern.search(response)
 
-    if match:
-        x = match.group("x")
-        y = match.group("y")
-        coordinates = [x, y]
-
-        robot_data = RobotSchema(X=x, Y=y)
-        await records_location(robot_data)
-
-        sio.emit('enqueue', str(coordinates))
 
     return response
 
@@ -91,9 +61,3 @@ async def receber_dados(data: DataModel):
     return resposta
 
 
-@app.get("/robo")
-async def read_records_location():
-    if not database.is_connected:
-        await database.connect()
-
-    return await Robot.objects.all()

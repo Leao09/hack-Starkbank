@@ -4,7 +4,7 @@ import jwt
 from decouple import config 
 
 JWT_SECRET = config('secret')
-JWT_ALGORITHM = config('algoritmo')
+JWT_ALGORITHM = config('algorith')
 
 # Função que gera um JWT
 def token_response(token:str):
