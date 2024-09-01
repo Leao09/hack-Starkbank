@@ -20,10 +20,14 @@ fornece relatórios e dashboards personalizados para cada empresa, com base nas 
 * reportei
 
 ### Tecnologias utilizadas:
-
+- Para o backend foi utilizado python com Fast API 
+- Para o frontend foi utilizado node.js com Next.js 
+- Para o banco de dados foi utilizado o banco PostgreSQL hospedado no supabase 
+- Para a interface gráfica foi utilizado o metabase 
+Obs. No front aprensenta onde inicial seria o ideal estar os dash do metabase contudo o freetier não possibilitar utilizá-lo embedado
 
 ### Estrutura do código:
-
+- Divisão entre front-end, backend e o docker compose da imagem do metabase
 ### Métricas de sucesso:
 * Insights direcionados;
 * Redução do tempo de análise;
