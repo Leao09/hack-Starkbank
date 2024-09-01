@@ -35,9 +35,9 @@
 }
 
 .textoInserido::before {
-  content: "ChatGPT";
+  content: "Effi-B";
   color: var(--blue, #3369FF);
-  font-family: Nunito;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;

@@ -3,7 +3,7 @@
 
 ### dotenv ###
 .env
-
+./invoice.csv
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
