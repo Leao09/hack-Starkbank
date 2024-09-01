@@ -1,6 +1,5 @@
-from db import database, User
 from pydantic import BaseModel
-from PyPDF2 import PdfReader
+import pandas as pd
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
@@ -20,33 +19,26 @@ app = APIRouter()
 # Função auxiliar para comunicar com API do ChatGPT
 async def connect_gpt(data: str):
 
-    reader = PdfReader('./data/inventario_simulado.pdf')
+    df = pd.read_csv('../data/invoice.csv', low_memory=False)
 
-    if reader is not None:
-        raw_text = ''
-        for i, page in enumerate(reader.pages):
-            text = page.extract_text()
-            if text:
-                raw_text += text
+    raw_text = df.astype(str).agg(' '.join, axis=1).str.cat(sep=' ')
+    
+    # Divide o texto em chunks
+    text_splitter = CharacterTextSplitter(
+        separator="\n",
+        chunk_size=1000,
+        chunk_overlap=200,
+        length_function=len,
+    )
+    chunks = text_splitter.split_text(raw_text)
 
-        text_splitter = CharacterTextSplitter(
-            separator="\n",
-            chunk_size=1000,
-            chunk_overlap=200,
-            length_function=len,
-        )
-        chunks = text_splitter.split_text(raw_text)
+    embeddings = OpenAIEmbeddings()
+    knowledge_base = FAISS.from_texts(chunks, embeddings)
 
-        embeddings = OpenAIEmbeddings()
-        knowledge_base = FAISS.from_texts(chunks, embeddings)
-
-        chain = load_qa_chain(OpenAI(), chain_type="stuff")
-        query = f"Você deve funcionar como um assistente de almoxarifado. Toda vez for feita uma pergunta a respeito a disponibilidade, descrição ou quantidade de uma peça, deve ser respondido sem a localização. Me diga a localização da peça SOMENTE quando solicitarmos essa informação, e diga que está indo, no formato [x, y] obrigatoriamente. Perguntas que não são a respeito do almoxarifado não devem ser respondidas. Pergunta: {data}"
-        docs = knowledge_base.similarity_search(query)
-        response = chain.run(input_documents=docs, question=query)
-
-
-
+    chain = load_qa_chain(OpenAI(), chain_type="finance")
+    query = f"Você é um analista financeiro senior especializado em gerar relatório financeiros para e-comerce: {data}"
+    docs = knowledge_base.similarity_search(query)
+    response = chain.run(input_documents=docs, question=query)
     return response
 
 

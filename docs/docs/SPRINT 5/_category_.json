@@ -1,9 +1,0 @@
-{
-    "label": "SPRINT 5",
-    "position": 5,
-    "link": {
-      "type": "generated-index",
-      "description": "Na Sprint 5, alcançamos a conclusão do projeto com a integração final e aperfeiçoamento do nosso sistema. Esta etapa final incluiu ajustes finais na integração da interface do usuário, o sistema de chatbot e a funcionalidade do robô. A experiência do usuário foi aprimorada com uma interface intuitiva, destacando-se na integração das funcionalidades de texto para fala (TTS) e fala para texto (STT). Também foram realizados testes para assegurar a eficiência da navegação do robô, do sistema de fala e do LLM."
-    }
-  }
-  

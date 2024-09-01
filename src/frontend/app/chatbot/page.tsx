@@ -8,7 +8,8 @@ import '../globals.css';
 const ChatbotPage = () => {
 
   const [inputText, setInputText] = useState('');
-  const [audioFile, setAudioFile] = useState(null);
+  const [audioFile, setAudioFile] = useState<File | null>(null);
+  const [csvFile, setCsvFile] = useState<File | null>(null);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputText(event.target.value);
@@ -54,7 +55,28 @@ const ChatbotPage = () => {
       }
     }
   }
+  // const handleCsvChange = (event: ChangeEvent<HTMLInputElement>) => {
+  //   if (event.target.files) {
+  //     setCsvFile(event.target.files[0]);
+  //   }
+  // };
 
+  // const handleCsvUpload = async () => {
+  //   if (csvFile) {
+  //     const formData = new FormData();
+  //     formData.append('file', csvFile);
+  //     try {
+  //       const response = await axios.post('http://localhost:8000/upload-csv/', formData, {
+  //         headers: {
+  //           'Content-Type': 'multipart/form-data'
+  //         }
+  //       });
+  //       console.log('CSV Uploaded:', response.data);
+  //     } catch (error) {
+  //       console.error('Erro ao enviar CSV:', error);
+  //     }
+  //   }
+  // };
 
   return (
     <div className={styles.container}>
@@ -88,7 +110,6 @@ const ChatbotPage = () => {
               <img src="/microphone-2.svg" alt="microfone"/> 
           </button>
         </div>
-        
       </div>
     </div>
   );

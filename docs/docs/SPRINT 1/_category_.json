@@ -1,9 +1,0 @@
-{
-    "label": "SPRINT 1",
-    "position": 1,
-    "link": {
-      "type": "generated-index",
-      "description": " Na Sprint 1, focamos em desenvolver uma apresentação completa para a equipe da AmBev, incluindo uma análise financeira com o Canvas de Proposta de Valor, análises de mercado (TAM, SAM, SOM), Matriz de Avaliação de Valor Oceano Azul e Matriz de Risco. Adicionalmente, analisamos os impactos sociais e ambientais da tecnologia, abordando privacidade, equidade, transparência, responsabilidade social e prevenção de viés. Também definimos a arquitetura do sistema, com ênfase em requisitos funcionais e não funcionais, estruturas de dados e padrões de design, visando a confiabilidade e adaptabilidade do software."
-    }
-  }
-  

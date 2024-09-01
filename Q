@@ -1,0 +1,141 @@
+[33mc1b95d53[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Deleta coisas
+[33m0ad86018[m Muita coisa
+[33mac0ed375[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m alterações para rodar front e back
+[33md39d194d[m Docs: add a seção de Demonstração Final do Sistema Integrado com vídeos
+[33m132f1b33[m Docs: videos de demonstração final do sistema
+[33m9b11b918[m image: nova imagem do roadmap e slides
+[33m038ac640[m Merge pull request #118 from 2023M8T2-Inteli/dev
+[33m056a49ac[m doc: login
+[33m3b23cf18[m Merge pull request #117 from 2023M8T2-Inteli/dev
+[33m8bf83b2a[m fix
+[33m61fe4543[m feat(frontend): :sparkles: Pagina para mostrar log de movimentação
+[33m41bd3d9a[m Merge pull request #115 from 2023M8T2-Inteli/dev
+[33mbe257732[m Merge branch 'main' into dev
+[33m25c77ee8[m Merge pull request #116 from 2023M8T2-Inteli/controlaudio
+[33m283bcc40[m feat: audio control
+[33m39a2df36[m Update README.md
+[33me70a1b58[m docs: :sparkles: atualiza instruções para execução do projeto
+[33mdd58218b[m docs: :sparkles: Arquitetura da solução atualizada
+[33m981aef89[m login finalizado
+[33mdd10f73a[m remove docker
+[33m404a3c4d[m comentario para informar necessidade de mudança de path caso use o docker para rodar
+[33mb17ad018[m feat(dockerizando): :sparkles: dockrização do servidor socket e backend
+[33m784d5c71[m fix: :bug: remove venv que foi commitada
+[33m62b253a6[m Merge pull request #114 from 2023M8T2-Inteli/loadingchat
+[33md22a28ff[m fix: loading and input null
+[33md4dad609[m Merge pull request #113 from 2023M8T2-Inteli/registra-log-movimentacao
+[33mfd85774e[m feat(log-movimentacao): :sparkles: salva o log e organiza rotas
+[33mf5f6f3c8[m Update diagrama-de-blocos.md
+[33m320a2457[m Update diagrama-de-blocos.md
+[33m40c713e3[m Update diagrama-de-blocos.md
+[33m1030adba[m Add files via upload
+[33mfee7368c[m Update diagrama-de-blocos.md
+[33m55f80a49[m Update diagrama-de-blocos.md
+[33m172f2340[m Add files via upload
+[33m878ce50c[m Add files via upload
+[33m9f46797b[m Merge pull request #112 from 2023M8T2-Inteli/dev
+[33m314f2eb9[m Update diagrama-de-blocos.md
+[33m6e8e5df1[m alteração da imagem (doc)
+[33m29ab5208[m Add files via upload
+[33m73b848bf[m alteração de imagem (doc)
+[33mbc56a4ea[m Merge pull request #111 from 2023M8T2-Inteli/dev
+[33md08c5fde[m changes
+[33m36e49375[m Alterações frontend
+[33ma2d389ce[m filtro de busca do histórico com Api
+[33mf031f175[m filtro de busca da busca de peças
+[33m83af9113[m Docs: exclusão de teste do ollama  da sprint 5
+[33m70d28293[m Merge pull request #110 from 2023M8T2-Inteli/dev
+[33m03b23477[m Docs: alteração sprint 4
+[33m06816fcd[m Merge pull request #109 from 2023M8T2-Inteli/dev
+[33mb9725574[m Merge pull request #108 from 2023M8T2-Inteli/main
+[33mced59269[m Docs: descrição do chatbot com nextjs
+[33m1719c7eb[m images: arquitetura chatbots
+[33md99e6bd6[m Merge pull request #107 from 2023M8T2-Inteli/dev
+[33m5bf91e16[m Docs: correção docussaurus
+[33m6cacdb2a[m Merge pull request #106 from 2023M8T2-Inteli/dev
+[33md7d6bdc0[m Docs: correção de pacotes do docussaurus
+[33m6247cd0c[m Merge pull request #105 from 2023M8T2-Inteli/dev
+[33m88286a97[m adc gitignore na raiz
+[33m73478a6e[m feat mov robo: robo segue pontos em sequencia
+[33m3b3b852a[m Merge pull request #104 from 2023M8T2-Inteli/dev
+[33mc76370d6[m Docs: correção de pacotes no docussarus
+[33mad046ddd[m Merge pull request #103 from 2023M8T2-Inteli/dev
+[33m33f88660[m Merge pull request #102 from 2023M8T2-Inteli/main
+[33m509b5d1c[m Docs: mudança da docs do backend na sprint 4
+[33md7332e58[m Merge pull request #101 from 2023M8T2-Inteli/arruma-repo
+[33m270ac08c[m fix: path
+[33m3833d31d[m delete: route
+[33ma8dc10e1[m Merge pull request #99 from 2023M8T2-Inteli/arruma-repo
+[33mde1dd2e8[m new back: hehe
+[33m10fbe6ab[m merge
+[33me5893d39[m arruamdno merge
+[33m2f0c3fe3[m Merge pull request #100 from 2023M8T2-Inteli/audio-vitor
+[33mec7d20fe[m feat: audio in each message
+[33m09afda75[m fix(backend): :wrench: arruma path da rota de tts
+[33mcf7ec242[m fix(client-socket): :wrench: retira comentario não utilizado
+[33m33e8a74a[m arruma repositorio
+[33m3926632a[m Docs: alteração na descrição do arquivo json da sprint 5
+[33mc989808c[m Merge pull request #98 from 2023M8T2-Inteli/dev
+[33m86480151[m Adicionando diagrama do backend
+[33me418ba62[m Merge pull request #97 from 2023M8T2-Inteli/dev
+[33med2f15f3[m feat(chatbot): organização das pastas do chatbot sprints passadas
+[33ma3522430[m Docs: exclusão de arquivos do chatbot em chainlit da docs da sprint 5
+[33mafcc6dcf[m Merge pull request #96 from 2023M8T2-Inteli/dev
+[33mc1033413[m Docs: correção do nome da sprint 5
+[33m372a2dc2[m Merge pull request #95 from 2023M8T2-Inteli/dev
+[33m36e1099b[m Docs: organização de pastas sprint 5
+[33me55778a7[m Merge pull request #94 from 2023M8T2-Inteli/dev
+[33m7ea4e063[m Merge pull request #93 from 2023M8T2-Inteli/main
+[33m9d5c731b[m remoção da chave
+[33m6a97140d[m vídeo
+[33m8e910d4e[m doc
+[33m06a43aee[m docs: Update teste-chatbot-llm-nodejs.md
+[33m9b133c4b[m Merge pull request #92 from 2023M8T2-Inteli/dev
+[33m30af8264[m documentação do back
+[33m39f057ac[m Merge pull request #91 from 2023M8T2-Inteli/dev
+[33mb7d345d8[m alteração do nome da imagem
+[33mdfed11f9[m Merge pull request #90 from 2023M8T2-Inteli/dev
+[33m8708cf08[m alteração na doc interface
+[33m8338bf16[m Merge pull request #88 from 2023M8T2-Inteli/dev
+[33mb313b67d[m Docs: exclusão de imagem do roadmap
+[33m7317d49e[m Merge pull request #87 from 2023M8T2-Inteli/dev
+[33m8efb8613[m Docs: correção de falha no arquivo json da seção de roadmap
+[33mde139aec[m Merge pull request #86 from 2023M8T2-Inteli/main
+[33md0d689eb[m Merge pull request #85 from 2023M8T2-Inteli/dev
+[33mc95232e8[m Docs: organização das pastas das sprints
+[33m89a1d33c[m Docs: renomeação de pastas
+[33me2cce213[m Create README.md
+[33mee6b11ed[m Add files via upload
+[33m25db6828[m Update LLM-TTS-STT.md
+[33m71502ed6[m Docs:alteração da doc do chatbot em chainlit
+[33m808cd9c3[m Merge pull request #84 from 2023M8T2-Inteli/dev
+[33m318979a1[m Design Assistivo (DOCs)
+[33m48413c54[m Merge pull request #83 from 2023M8T2-Inteli/main
+[33mf4a2cd9a[m Docs: alteração da descrição da seção do backend
+[33m0511663d[m Docs: alterações nas descrições das pastas das sprints e inserção do link da apresentação da sprint 4
+[33ma635c106[m Merge pull request #82 from 2023M8T2-Inteli/dev
+[33m8e6d0050[m Docs: correção link do slide
+[33m4643d0e8[m Merge pull request #81 from 2023M8T2-Inteli/dev
+[33m240303af[m Docs and feat: inclusões na documentação do chatbot do chainlit e comentários no codigo
+[33m3df722c3[m Merge pull request #80 from 2023M8T2-Inteli/dev
+[33m85ce492a[m docs: corrigindo pacotes para upload da documentação no docussaurus
+[33mc72a05eb[m Docs: organização da documentação por sprints - correção
+[33mf74f828d[m Merge pull request #79 from 2023M8T2-Inteli/dev
+[33m5bd9c0fa[m Docs: organização da documentação por sprints
+[33m6fae9980[m Merge pull request #78 from 2023M8T2-Inteli/dev
+[33md5e71909[m Merge pull request #77 from 2023M8T2-Inteli/fusion
+[33m20765111[m feat: GO
+[33maed2dd4e[m Merge pull request #76 from 2023M8T2-Inteli/integracao_Tabelas
+[33m908cb302[m Merge branch 'dev' of https://github.com/2023M8T2-Inteli/grupo5 into integracao_Tabelas
+[33ma983c143[m Merge pull request #75 from 2023M8T2-Inteli/tts-front
+[33ma3f61ead[m feat(llm): :sparkles: atualizações
+[33mc0310f24[m integrações das tabelas e modal de requisição
+[33m126c67e4[m Merge branch 'dev' of https://github.com/2023M8T2-Inteli/grupo5 into backend
+[33md517b4dd[m Rotas finalizadas
+[33m6e3a116c[m Crud para user e historic prontos
+[33m96ce0b43[m feat: :sparkles: fetch na rota do llm
+[33m4bb9f9c9[m feat: sst tss
+[33m140f3c73[m atualização da parte do alisson
+[33m904f2e9b[m feat: chatbot modal stt
+[33m9c2f6bef[m del: node_modules
+

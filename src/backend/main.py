@@ -1,10 +1,7 @@
-from fastapi import FastAPI, Request, Body, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from db import database
-
-from routes.user import app as user_router
-from routes.historic import app as historic_router
-from routes.warehouse import app as warehouse_router
+from routes.csvProcessor import database
+from routes.csvProcessor import app as csv_router
 from routes.robot import app as robot_router
 from routes.tts import app as tts_router
 
@@ -24,11 +21,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(user_router)
-app.include_router(historic_router)
-app.include_router(warehouse_router)
 app.include_router(robot_router)
 app.include_router(tts_router)
+app.include_router(csv_router)
 
 
 @app.on_event("startup")
